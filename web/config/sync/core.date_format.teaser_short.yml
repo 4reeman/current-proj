@@ -1,0 +1,8 @@
+uuid: 1a233044-ff82-4953-b3e1-1c830e25a70d
+langcode: en
+status: true
+dependencies: {  }
+id: teaser_short
+label: 'teaser short'
+locked: false
+pattern: 'F j, Y'

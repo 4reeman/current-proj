@@ -1,0 +1,14 @@
+uuid: 60211d90-02ad-4784-bbee-4101729d3525
+langcode: en
+status: true
+dependencies: {  }
+name: sub_article_image
+label: 'Sub-article image'
+effects:
+  f96826ef-01ee-47eb-bd1a-a2403c843058:
+    uuid: f96826ef-01ee-47eb-bd1a-a2403c843058
+    id: image_resize
+    weight: 1
+    data:
+      width: 259
+      height: 390

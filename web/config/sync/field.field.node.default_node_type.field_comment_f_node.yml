@@ -1,0 +1,33 @@
+uuid: ca6cd60f-5682-4854-9b52-b0c75a06f599
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comment_f_node
+    - node.type.default_node_type
+  module:
+    - comment
+id: node.default_node_type.field_comment_f_node
+field_name: field_comment_f_node
+entity_type: node
+bundle: default_node_type
+label: 'comment f node'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: 1
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 5
+  anonymous: 0
+  form_location: true
+  preview: 0
+field_type: comment

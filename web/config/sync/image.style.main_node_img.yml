@@ -1,0 +1,14 @@
+uuid: ffe2158c-c438-49c6-9620-aae1b1aabd06
+langcode: en
+status: true
+dependencies: {  }
+name: main_node_img
+label: 'main node img'
+effects:
+  6165abb0-5c4f-4a4c-aa1f-6fb67863f59a:
+    uuid: 6165abb0-5c4f-4a4c-aa1f-6fb67863f59a
+    id: image_resize
+    weight: 1
+    data:
+      width: 1052
+      height: 701

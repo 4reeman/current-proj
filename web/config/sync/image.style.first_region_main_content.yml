@@ -1,0 +1,22 @@
+uuid: 1dbd1b74-76b7-409d-8c69-6afb92930921
+langcode: en
+status: true
+dependencies: {  }
+name: first_region_main_content
+label: 'first region main content'
+effects:
+  730b8824-12bf-4f8c-8418-c29726620674:
+    uuid: 730b8824-12bf-4f8c-8418-c29726620674
+    id: image_resize
+    weight: 1
+    data:
+      width: 334
+      height: 150
+  740e6323-7062-4200-85c9-627e88527ede:
+    uuid: 740e6323-7062-4200-85c9-627e88527ede
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 334
+      height: 150
+      anchor: center-center

@@ -1,0 +1,10 @@
+uuid: fd917738-7d4b-4b62-ad1c-02595e249d63
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.pager_titles
+label: 'Pager Title'
+targetEntityType: node
+cache: true

@@ -1,0 +1,10 @@
+uuid: b09da0ac-464f-4276-9fe8-1662d80bd631
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.title_date
+label: 'Title & Date'
+targetEntityType: node
+cache: true

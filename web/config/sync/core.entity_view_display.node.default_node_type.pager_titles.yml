@@ -1,0 +1,42 @@
+uuid: d4b7bac4-52ba-474f-b7f7-4acee3639c65
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.pager_titles
+    - field.field.node.default_node_type.body
+    - field.field.node.default_node_type.field_comment_f_node
+    - field.field.node.default_node_type.field_editor_picks
+    - field.field.node.default_node_type.field_img_under_body
+    - field.field.node.default_node_type.field_main_node_img
+    - field.field.node.default_node_type.field_share_
+    - field.field.node.default_node_type.field_share_post_bottom
+    - field.field.node.default_node_type.field_sub_article_image
+    - field.field.node.default_node_type.field_taags
+    - field.field.node.default_node_type.field_taxonom
+    - field.field.node.default_node_type.field_title_for_article
+    - field.field.node.default_node_type.field_total
+    - field.field.node.default_node_type.field_total_title
+    - node.type.default_node_type
+  module:
+    - user
+id: node.default_node_type.pager_titles
+targetEntityType: node
+bundle: default_node_type
+mode: pager_titles
+content: {  }
+hidden:
+  body: true
+  field_comment_f_node: true
+  field_editor_picks: true
+  field_img_under_body: true
+  field_main_node_img: true
+  field_share_: true
+  field_share_post_bottom: true
+  field_sub_article_image: true
+  field_taags: true
+  field_taxonom: true
+  field_title_for_article: true
+  field_total: true
+  field_total_title: true
+  links: true

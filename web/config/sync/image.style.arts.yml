@@ -1,0 +1,22 @@
+uuid: 407ff44b-5181-45ab-a471-ced0daa7bb24
+langcode: en
+status: true
+dependencies: {  }
+name: arts
+label: arts
+effects:
+  5c065ad8-25e9-4f3b-8249-d178c157d2b1:
+    uuid: 5c065ad8-25e9-4f3b-8249-d178c157d2b1
+    id: image_resize
+    weight: 1
+    data:
+      width: 200
+      height: 110
+  826f42a2-cfb5-4305-afde-1096985c5824:
+    uuid: 826f42a2-cfb5-4305-afde-1096985c5824
+    id: image_crop
+    weight: 2
+    data:
+      width: 200
+      height: 110
+      anchor: center-center

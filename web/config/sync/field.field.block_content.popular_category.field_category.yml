@@ -1,0 +1,29 @@
+uuid: f663eea6-5502-4158-a2fd-f58e57ed3615
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.popular_category
+    - field.storage.block_content.field_category
+    - taxonomy.vocabulary.main_page
+id: block_content.popular_category.field_category
+field_name: field_category
+entity_type: block_content
+bundle: popular_category
+label: 'Popular Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      main_page: main_page
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

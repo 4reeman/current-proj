@@ -1,0 +1,25 @@
+uuid: 42d762c7-d4a0-4595-a9df-7bc64adcaead
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:about_us:32b55dfa-47d1-4da0-9928-84d927bdc958'
+  module:
+    - block_content
+  theme:
+    - fifth_sub_bootstrap
+id: aboutusblockfooterabovemainheader
+theme: fifth_sub_bootstrap
+region: footer_fifth
+weight: -7
+provider: null
+plugin: 'block_content:32b55dfa-47d1-4da0-9928-84d927bdc958'
+settings:
+  id: 'block_content:32b55dfa-47d1-4da0-9928-84d927bdc958'
+  label: 'About Us'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

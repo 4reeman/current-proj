@@ -1,0 +1,29 @@
+uuid: c8b52533-bb77-42d5-93aa-f5e8bea35b41
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.third_region
+  module:
+    - system
+    - views
+  theme:
+    - fifth_sub_bootstrap
+id: views_block__third_region_block_2
+theme: fifth_sub_bootstrap
+region: sidebar_sixth
+weight: -16
+provider: null
+plugin: 'views_block:third_region-block_2'
+settings:
+  id: 'views_block:third_region-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: '2'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

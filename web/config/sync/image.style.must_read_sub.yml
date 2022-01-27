@@ -1,0 +1,22 @@
+uuid: 3c982ab2-071e-4f65-9c11-b67014fa8781
+langcode: en
+status: true
+dependencies: {  }
+name: must_read_sub
+label: 'must read sub'
+effects:
+  7df28e43-fa44-442f-bf1b-c6046ce871de:
+    uuid: 7df28e43-fa44-442f-bf1b-c6046ce871de
+    id: image_resize
+    weight: 1
+    data:
+      width: 384
+      height: 173
+  dbe631d3-1d7a-4794-993a-e60af189386d:
+    uuid: dbe631d3-1d7a-4794-993a-e60af189386d
+    id: image_crop
+    weight: 2
+    data:
+      width: 384
+      height: 173
+      anchor: center-center

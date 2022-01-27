@@ -1,0 +1,14 @@
+uuid: 32cf4a20-efa0-48f9-969e-78324d5759f6
+langcode: en
+status: true
+dependencies: {  }
+name: image_under_body
+label: 'Image under body'
+effects:
+  bebb2fb1-09bb-4df9-b80f-6c8e3bc1c933:
+    uuid: bebb2fb1-09bb-4df9-b80f-6c8e3bc1c933
+    id: image_resize
+    weight: 1
+    data:
+      width: 691
+      height: 460

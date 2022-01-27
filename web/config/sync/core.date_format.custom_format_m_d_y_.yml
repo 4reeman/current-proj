@@ -1,0 +1,8 @@
+uuid: c2053595-f990-411f-86a3-8e967a0b7682
+langcode: en
+status: true
+dependencies: {  }
+id: custom_format_m_d_y_
+label: 'Above header long'
+locked: false
+pattern: 'l, F j, Y'

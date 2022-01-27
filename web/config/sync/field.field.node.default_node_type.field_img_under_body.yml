@@ -1,0 +1,29 @@
+uuid: fddf825c-92ca-4dd5-9997-97ace9dd6d49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_img_under_body
+    - media.type.image
+    - node.type.default_node_type
+id: node.default_node_type.field_img_under_body
+field_name: field_img_under_body
+entity_type: node
+bundle: default_node_type
+label: 'Image under body'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 1afbf4a0-361a-45fc-b7b4-6faa6f81340b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.must_read
+  module:
+    - system
+    - views
+  theme:
+    - fifth_sub_bootstrap
+id: views_block__must_read_block_2
+theme: fifth_sub_bootstrap
+region: special_content
+weight: 0
+provider: null
+plugin: 'views_block:must_read-block_2'
+settings:
+  id: 'views_block:must_read-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '4'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

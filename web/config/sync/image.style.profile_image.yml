@@ -1,0 +1,14 @@
+uuid: 973c3dd0-a39f-45eb-a872-ef3e0d27c51a
+langcode: en
+status: true
+dependencies: {  }
+name: profile_image
+label: 'profile image'
+effects:
+  07340532-2953-4825-8b80-0f5b7fd527f0:
+    uuid: 07340532-2953-4825-8b80-0f5b7fd527f0
+    id: image_resize
+    weight: 1
+    data:
+      width: 60
+      height: 60

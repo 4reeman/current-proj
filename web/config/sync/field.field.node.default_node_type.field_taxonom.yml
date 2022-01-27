@@ -1,0 +1,29 @@
+uuid: 646fae56-7a34-4752-a5a5-3a0c9dc2183e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taxonom
+    - node.type.default_node_type
+    - taxonomy.vocabulary.main_page
+id: node.default_node_type.field_taxonom
+field_name: field_taxonom
+entity_type: node
+bundle: default_node_type
+label: Taxonomy
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      main_page: main_page
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

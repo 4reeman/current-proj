@@ -1,0 +1,17 @@
+uuid: 0f322683-b2f1-4c49-9f6d-4246306cc2c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Default node type'
+type: default_node_type
+description: 'for each node'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,23 @@
+uuid: 07297f8d-02eb-418e-baea-c6400009fc63
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fifth_sub_bootstrap
+id: sitebranding
+theme: fifth_sub_bootstrap
+region: footer_fifth
+weight: -9
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

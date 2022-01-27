@@ -1,0 +1,25 @@
+uuid: 4816543e-5fb1-477b-912b-1fb67b4f9104
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:copyrighting_footer:a4195bea-b149-4701-bc8e-70b6075ab15d'
+  module:
+    - block_content
+  theme:
+    - fifth_sub_bootstrap
+id: copyrightingfooterundersitename
+theme: fifth_sub_bootstrap
+region: footer_fifth
+weight: -8
+provider: null
+plugin: 'block_content:a4195bea-b149-4701-bc8e-70b6075ab15d'
+settings:
+  id: 'block_content:a4195bea-b149-4701-bc8e-70b6075ab15d'
+  label: 'Copyrighting footer under site name'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

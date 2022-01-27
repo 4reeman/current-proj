@@ -1,0 +1,22 @@
+uuid: 13ec8856-b726-4492-9e22-61c296eaf52e
+langcode: en
+status: true
+dependencies: {  }
+name: must_read
+label: 'must read'
+effects:
+  8f207c2d-9598-4cf3-aa34-ec17c6d6cf4e:
+    uuid: 8f207c2d-9598-4cf3-aa34-ec17c6d6cf4e
+    id: image_resize
+    weight: 1
+    data:
+      width: 562
+      height: 478
+  52cb3329-7d87-4656-99df-4f8d9ec5fa3c:
+    uuid: 52cb3329-7d87-4656-99df-4f8d9ec5fa3c
+    id: image_scale
+    weight: 2
+    data:
+      width: 562
+      height: 478
+      upscale: false

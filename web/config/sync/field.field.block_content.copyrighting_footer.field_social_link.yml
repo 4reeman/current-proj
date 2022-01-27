@@ -1,0 +1,21 @@
+uuid: bdc9476e-5d7c-4186-bd4e-7543a0d2e898
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copyrighting_footer
+    - field.storage.block_content.field_social_link
+  module:
+    - social_link_field
+id: block_content.copyrighting_footer.field_social_link
+field_name: field_social_link
+entity_type: block_content
+bundle: copyrighting_footer
+label: 'social link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: social_links

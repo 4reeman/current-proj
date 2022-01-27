@@ -1,0 +1,25 @@
+uuid: a8e7f1ab-8556-4ae0-a923-6400522ab27a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_share_
+    - node.type.default_node_type
+  module:
+    - social_media
+id: node.default_node_type.field_share_
+field_name: field_share_
+entity_type: node
+bundle: default_node_type
+label: 'share links'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: social_media

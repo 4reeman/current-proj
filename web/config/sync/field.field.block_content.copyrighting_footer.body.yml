@@ -1,0 +1,23 @@
+uuid: 7357c7a6-7e5f-400c-9cda-caab31eb39d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copyrighting_footer
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.copyrighting_footer.body
+field_name: body
+entity_type: block_content
+bundle: copyrighting_footer
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

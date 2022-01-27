@@ -1,0 +1,24 @@
+uuid: d0232214-ae1b-4979-bb40-a3865cb081df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.editor_picks
+  module:
+    - views
+  theme:
+    - fifth_sub_bootstrap
+id: views_block__editor_picks_block_1
+theme: fifth_sub_bootstrap
+region: footer_fifth
+weight: -5
+provider: null
+plugin: 'views_block:editor_picks-block_1'
+settings:
+  id: 'views_block:editor_picks-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 989ffdc7-1c7a-4c9a-b79b-083ed92ca3f3
+langcode: en
+status: true
+dependencies: {  }
+id: copyrighting_footer
+label: 'Copyrighting footer'
+revision: 0
+description: ''

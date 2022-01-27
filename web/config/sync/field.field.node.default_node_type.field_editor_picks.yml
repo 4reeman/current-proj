@@ -1,0 +1,23 @@
+uuid: 73db9b0f-132e-475b-9472-c677a94db9f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editor_picks
+    - node.type.default_node_type
+id: node.default_node_type.field_editor_picks
+field_name: field_editor_picks
+entity_type: node
+bundle: default_node_type
+label: 'Editor Picks'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,36 @@
+name: fifth_sub_bootstrap
+type: theme
+description: 'SASS starter kit for a Bootstrap Barrio SubTheme.'
+# version: VERSION
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap_barrio
+
+libraries:
+  - fifth_sub_bootstrap/global-styling
+libraries-override:
+  bootstrap_barrio/global-styling: false
+regions:
+  top_header: 'Top header'
+  header: Header
+  header_form: 'Header form'
+  primary_menu: 'Primary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  additional_content: 'Additional content'
+  content_second_group: 'Second group content'
+  sidebar_third: 'Sidebar third'
+  sidebar_fourth: 'Sidebar fourth'
+  special_content: 'Special content'
+  content_third_group: 'Third group content'
+  sidebar_fifth: 'Sidebar fifth'
+  sidebar_sixth: 'Sidebar sixth'
+  footer_fifth: 'Footer fifth'
+
+# Information added by Drupal.org packaging script on 2021-10-11
+version: '5.0.5'
+project: 'fifth_sub_bootstrap'
+datestamp: 1633918678

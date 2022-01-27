@@ -1,0 +1,25 @@
+uuid: cc680b16-9b49-41a9-a38f-7d0405075dd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fifth_sub_bootstrap
+_core:
+  default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
+id: fifth_sub_bootstrap_branding
+theme: fifth_sub_bootstrap
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

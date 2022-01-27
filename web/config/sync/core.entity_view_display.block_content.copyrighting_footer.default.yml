@@ -1,0 +1,34 @@
+uuid: 80722532-f5d9-43e5-a0dc-782c894c0250
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copyrighting_footer
+    - field.field.block_content.copyrighting_footer.body
+    - field.field.block_content.copyrighting_footer.field_social_link
+  module:
+    - social_link_field
+    - text
+id: block_content.copyrighting_footer.default
+targetEntityType: block_content
+bundle: copyrighting_footer
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_social_link:
+    type: font_awesome
+    label: above
+    settings:
+      icon_type: common
+      orientation: vertical
+      new_tab: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+uuid: 17368455-46c3-44fb-9afc-680f19c8acfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.title_author_date
+label: 'Title & Author/date'
+targetEntityType: node
+cache: true

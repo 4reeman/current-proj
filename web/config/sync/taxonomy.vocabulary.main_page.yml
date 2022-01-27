@@ -1,0 +1,8 @@
+uuid: 9a03606f-262f-4fd1-b4fb-e4bf4c77fa25
+langcode: en
+status: true
+dependencies: {  }
+name: 'Main page'
+vid: main_page
+description: 'On click redirect on views with teaser of current taxonomy'
+weight: 0

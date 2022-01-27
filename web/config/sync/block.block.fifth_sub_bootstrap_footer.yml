@@ -1,0 +1,27 @@
+uuid: 03ea71fa-9c16-44ef-bd6b-c9ba631000ab
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - fifth_sub_bootstrap
+_core:
+  default_config_hash: pnCK21YFjH7iB4XDeokSq3N3XSr6qX8BsqMs9nmip6E
+id: fifth_sub_bootstrap_footer
+theme: fifth_sub_bootstrap
+region: footer_fifth
+weight: -4
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

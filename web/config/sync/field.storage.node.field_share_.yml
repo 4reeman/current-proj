@@ -1,0 +1,19 @@
+uuid: 56e337df-bc22-4ec3-8c94-305797d57a24
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - social_media
+id: node.field_share_
+field_name: field_share_
+entity_type: node
+type: social_media
+settings: {  }
+module: social_media
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

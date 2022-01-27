@@ -1,0 +1,27 @@
+uuid: 23fd5820-621a-4821-9150-2f9243c45c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_us
+    - field.field.block_content.about_us.field_links_for_
+  module:
+    - link
+id: block_content.about_us.default
+targetEntityType: block_content
+bundle: about_us
+mode: default
+content:
+  field_links_for_:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

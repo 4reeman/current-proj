@@ -1,0 +1,25 @@
+uuid: b2a30ce0-cc11-4a30-b4ab-f2621e92d865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_share_post_bottom
+    - node.type.default_node_type
+  module:
+    - social_media
+id: node.default_node_type.field_share_post_bottom
+field_name: field_share_post_bottom
+entity_type: node
+bundle: default_node_type
+label: 'share post bottom'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: social_media
