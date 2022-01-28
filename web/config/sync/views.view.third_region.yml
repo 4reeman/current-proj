@@ -848,7 +848,7 @@ display:
           operator: '='
           value: Arts
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: name_op
             label: Name
@@ -1155,7 +1155,7 @@ display:
           operator: '='
           value: Travel
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: name_op
             label: Name
@@ -1176,16 +1176,19 @@ display:
             placeholder: ''
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: Name
+            description: null
+            identifier: name
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
       filter_groups:
         operator: AND
         groups:

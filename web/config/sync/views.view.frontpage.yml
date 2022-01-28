@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - core.entity_view_mode.node.pager_titles
     - core.entity_view_mode.node.rss
   module:
     - node
@@ -217,7 +216,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: pager_titles
+          view_mode: default
       query:
         type: views_query
         options:

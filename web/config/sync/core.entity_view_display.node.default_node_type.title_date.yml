@@ -65,7 +65,7 @@ content:
     region: content
   field_share_:
     type: social_media_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 1

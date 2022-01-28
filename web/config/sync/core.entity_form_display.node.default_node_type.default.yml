@@ -46,27 +46,27 @@ content:
     third_party_settings: {  }
   field_comment_f_node:
     type: comment_default
-    weight: 30
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   field_editor_picks:
     type: boolean_checkbox
-    weight: 36
+    weight: 19
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_img_under_body:
     type: media_library_widget
-    weight: 35
+    weight: 11
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_main_node_img:
     type: media_library_widget
-    weight: 32
+    weight: 9
     region: content
     settings:
       media_types: {  }
@@ -80,21 +80,21 @@ content:
     third_party_settings: {  }
   field_share_post_bottom:
     type: social_media_default
-    weight: 29
+    weight: 17
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_sub_article_image:
     type: media_library_widget
-    weight: 34
+    weight: 13
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_taags:
     type: options_buttons
-    weight: 28
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -116,7 +116,7 @@ content:
     third_party_settings: {  }
   field_total:
     type: text_textarea_with_summary
-    weight: 27
+    weight: 15
     region: content
     settings:
       rows: 9
@@ -126,7 +126,7 @@ content:
     third_party_settings: {  }
   field_total_title:
     type: text_textfield
-    weight: 33
+    weight: 14
     region: content
     settings:
       size: 60
