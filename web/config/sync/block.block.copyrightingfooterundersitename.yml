@@ -11,7 +11,7 @@ dependencies:
 id: copyrightingfooterundersitename
 theme: fifth_sub_bootstrap
 region: footer_fifth
-weight: -8
+weight: -15
 provider: null
 plugin: 'block_content:a4195bea-b149-4701-bc8e-70b6075ab15d'
 settings:

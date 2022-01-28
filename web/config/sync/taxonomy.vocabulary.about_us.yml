@@ -1,0 +1,8 @@
+uuid: b802cdeb-955b-40c0-83eb-9a30736bccc3
+langcode: en
+status: true
+dependencies: {  }
+name: 'About Us'
+vid: about_us
+description: 'About us block footer'
+weight: 0

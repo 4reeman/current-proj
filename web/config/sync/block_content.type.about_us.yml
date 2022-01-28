@@ -1,8 +1,0 @@
-uuid: 8c019470-4388-4530-b187-6f29c55ddae0
-langcode: en
-status: true
-dependencies: {  }
-id: about_us
-label: 'About Us'
-revision: 0
-description: 'Use ( footer & above main header )'

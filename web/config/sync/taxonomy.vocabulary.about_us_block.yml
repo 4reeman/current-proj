@@ -1,8 +1,0 @@
-uuid: 634b901e-d2bd-487b-bc5c-80ab586aa6af
-langcode: en
-status: true
-dependencies: {  }
-name: 'About us block'
-vid: about_us_block
-description: 'to be used in header & footer'
-weight: 0

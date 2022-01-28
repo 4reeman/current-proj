@@ -1,24 +1,25 @@
-uuid: d0232214-ae1b-4979-bb40-a3865cb081df
+uuid: 69cc357b-1d3e-4b58-b83c-cc54450c31ec
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.editor_picks
+    - views.view.about_us
   module:
     - views
   theme:
     - fifth_sub_bootstrap
-id: views_block__editor_picks_block_1
+id: views_block__about_us_block_2
 theme: fifth_sub_bootstrap
 region: footer_fifth
-weight: -12
+weight: -13
 provider: null
-plugin: 'views_block:editor_picks-block_1'
+plugin: 'views_block:about_us-block_2'
 settings:
-  id: 'views_block:editor_picks-block_1'
+  id: 'views_block:about_us-block_2'
   label: ''
   label_display: visible
   provider: views
+  context_mapping: {  }
   views_label: ''
   items_per_page: none
 visibility: {  }

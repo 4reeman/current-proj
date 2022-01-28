@@ -1,8 +1,0 @@
-uuid: 0cff921d-be2f-42a7-9e43-c532633d2006
-langcode: en
-status: true
-dependencies: {  }
-id: popular_category
-label: 'Popular Category'
-revision: 0
-description: 'for Footer Popular Category'
