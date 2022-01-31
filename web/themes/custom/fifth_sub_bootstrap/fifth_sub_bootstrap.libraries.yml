@@ -1,6 +1,8 @@
 global-styling:
   version: VERSION
-  js: 
+  js:
+    js/platform.js: {}
+    js/custom/platform_patch.js: {}
     js/bootstrap.min.js: { weight: -48 }
     js/barrio.js: {}
     js/custom.js: {}
@@ -9,5 +11,6 @@ global-styling:
       css/style.css: {}
   dependencies:
     - core/jquery
+    - core/jquery.once
     - core/drupal
     - core/popperjs

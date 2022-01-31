@@ -22,6 +22,7 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/devel": "^4.1",
+        "drupal/fixed_block_content": "^1.1",
         "drupal/social_link_field": "^1.1@alpha",
         "drupal/social_media": "^1.8",
         "drush/drush": "^10.2"

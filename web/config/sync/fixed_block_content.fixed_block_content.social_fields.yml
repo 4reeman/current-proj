@@ -1,0 +1,12 @@
+uuid: f2ef0c43-5627-4990-bbc9-cae09865d108
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copyrighting_footer
+id: social_fields
+title: 'social fields'
+block_content_bundle: copyrighting_footer
+default_content: null
+auto_export: 2
+protected: false
