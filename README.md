@@ -1,3 +1,6 @@
+https://redmine.devbranch.work/issues/4315
+https://redmine.devbranch.work/issues/4332  Trouble with js
+
 # Docksal powered Drupal 9 With Composer Installation
 
 This is a sample Drupal 9 with Composer installation pre-configured for use with Docksal.
