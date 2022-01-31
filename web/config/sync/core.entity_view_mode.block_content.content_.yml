@@ -1,0 +1,10 @@
+uuid: 31e20d5b-f7fc-4f0b-bfb6-8d11d2d632c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.content_
+label: 'Content editor'
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,22 @@
+uuid: 82e86bf4-dea1-480b-8b7d-d18e7456e24a
+langcode: en
+status: true
+dependencies: {  }
+name: content_editor_profile_120x120_
+label: 'Content Editor Profile (120x120)'
+effects:
+  f90baa97-ca69-4bed-9cad-68a3649db930:
+    uuid: f90baa97-ca69-4bed-9cad-68a3649db930
+    id: image_resize
+    weight: 1
+    data:
+      width: 120
+      height: 120
+  b22403a4-9ecb-4166-b547-82340baaf6d8:
+    uuid: b22403a4-9ecb-4166-b547-82340baaf6d8
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 120
+      height: 120
+      anchor: center-center

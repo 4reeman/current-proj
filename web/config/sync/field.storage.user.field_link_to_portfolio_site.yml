@@ -1,0 +1,19 @@
+uuid: f6792750-6c72-4df9-b550-c9e519e7682c
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - user
+id: user.field_link_to_portfolio_site
+field_name: field_link_to_portfolio_site
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

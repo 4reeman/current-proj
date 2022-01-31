@@ -1,0 +1,19 @@
+uuid: 9f13b98a-d2c5-4c4b-a7a4-9ff47425ffd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_description_of_work_experi
+field_name: field_description_of_work_experi
+entity_type: user
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

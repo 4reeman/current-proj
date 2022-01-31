@@ -9,7 +9,7 @@ _core:
 id: fifth_sub_bootstrap_local_tasks
 theme: fifth_sub_bootstrap
 region: content
-weight: -40
+weight: -15
 provider: null
 plugin: local_tasks_block
 settings:

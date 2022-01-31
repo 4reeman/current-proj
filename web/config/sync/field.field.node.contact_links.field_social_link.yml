@@ -1,0 +1,21 @@
+uuid: 92a11e9d-e096-4c60-97fa-b72c5a801cad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_link
+    - node.type.contact_links
+  module:
+    - social_link_field
+id: node.contact_links.field_social_link
+field_name: field_social_link
+entity_type: node
+bundle: contact_links
+label: 'social link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: social_links

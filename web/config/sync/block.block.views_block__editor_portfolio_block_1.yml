@@ -1,29 +1,29 @@
-uuid: ab1c5273-b4fe-4f1b-947c-fcd876c35fc8
+uuid: 8070b59a-0128-49f6-a0fc-3004ee88afda
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.editor_picks
+    - views.view.editor_portfolio
   module:
     - system
     - views
   theme:
     - fifth_sub_bootstrap
-id: views_block__editor_picks_block_3
+id: views_block__editor_portfolio_block_1
 theme: fifth_sub_bootstrap
-region: content
+region: sidebar_first
 weight: -16
 provider: null
-plugin: 'views_block:editor_picks-block_3'
+plugin: 'views_block:editor_portfolio-block_1'
 settings:
-  id: 'views_block:editor_picks-block_3'
+  id: 'views_block:editor_portfolio-block_1'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
   views_label: ''
-  items_per_page: '3'
+  items_per_page: none
 visibility:
   request_path:
     id: request_path
-    negate: false
+    negate: true
     pages: '<front>'

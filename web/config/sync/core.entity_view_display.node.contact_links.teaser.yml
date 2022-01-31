@@ -1,0 +1,22 @@
+uuid: 4d5007ac-8c30-4090-860b-1f12b4d83115
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contact_links.field_social_link
+    - node.type.contact_links
+  module:
+    - user
+id: node.contact_links.teaser
+targetEntityType: node
+bundle: contact_links
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_social_link: true

@@ -10,6 +10,8 @@
  */
 function fifth_sub_bootstrap_preprocess_node(&$variables) {
 //  $query = \Drupal::entityQuery();
-//  $query = \Drupal::database()->select()
-  $variables['comment_count'] = 100500;
+//  $query = \Drupal::database()->select();
+  if ($variables['node']->getType() == 'default_node_type') {
+    $variables['comment_count'] = $variables['node']->get('field_comment_f_node')->comment_count;
+  }
 }

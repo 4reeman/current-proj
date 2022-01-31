@@ -1,0 +1,36 @@
+uuid: c185b93c-a0ad-49df-a7f4-8d37610e0411
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_social_link
+  module:
+    - social_link_field
+    - user
+id: user.user.field_social_link
+field_name: field_social_link
+entity_type: user
+bundle: user
+label: 'social links'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    link: devbranch
+    social: facebook
+  -
+    link: devbranch
+    social: instagram
+  -
+    link: devbranch
+    social: twitter
+  -
+    link: devbranch
+    social: github
+  -
+    link: devbranch
+    social: drupal
+default_value_callback: ''
+settings: {  }
+field_type: social_links

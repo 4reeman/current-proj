@@ -12,7 +12,7 @@ dependencies:
 id: views_block__editor_picks_block_2
 theme: fifth_sub_bootstrap
 region: sidebar_first
-weight: 0
+weight: -15
 provider: null
 plugin: 'views_block:editor_picks-block_2'
 settings:

@@ -9,7 +9,7 @@ _core:
 id: fifth_sub_bootstrap_local_actions
 theme: fifth_sub_bootstrap
 region: content
-weight: -20
+weight: -13
 provider: null
 plugin: local_actions_block
 settings:

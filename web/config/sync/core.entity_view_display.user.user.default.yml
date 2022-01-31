@@ -3,10 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_description_of_work_experi
+    - field.field.user.user.field_link_to_portfolio_site
+    - field.field.user.user.field_social_link
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - link
+    - social_link_field
     - user
 _core:
   default_config_hash: E1qmUI2SlozLlJ308jfMMFKT67l1p6PywE2LTRbeYS4
@@ -15,8 +20,39 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_description_of_work_experi:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link_to_portfolio_site:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_link:
+    type: font_awesome
+    label: hidden
+    settings:
+      icon_type: common
+      orientation: vertical
+      new_tab: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
   member_for:
-    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   user_picture:
     type: image

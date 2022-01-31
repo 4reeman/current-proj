@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_description_of_work_experi
+    - field.field.user.user.field_link_to_portfolio_site
+    - field.field.user.user.field_social_link
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -26,4 +29,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_description_of_work_experi: true
+  field_link_to_portfolio_site: true
+  field_social_link: true
   member_for: true

@@ -1,0 +1,21 @@
+uuid: c34371f9-14de-43f3-9d92-2dbcbaa3e120
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact_links.field_social_link
+    - node.type.contact_links
+  module:
+    - user
+id: node.contact_links.default
+targetEntityType: node
+bundle: contact_links
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_social_link: true
