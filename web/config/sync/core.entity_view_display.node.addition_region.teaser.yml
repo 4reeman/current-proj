@@ -1,0 +1,36 @@
+uuid: d361106f-5d88-41cd-bf8c-71ddbf462bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.addition_region.body
+    - field.field.node.addition_region.field_audio
+    - field.field.node.addition_region.field_follow
+    - field.field.node.addition_region.field_picture
+    - node.type.addition_region
+  module:
+    - text
+    - user
+id: node.addition_region.teaser
+targetEntityType: node
+bundle: addition_region
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_audio: true
+  field_follow: true
+  field_picture: true

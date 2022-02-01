@@ -1,0 +1,34 @@
+uuid: aa1e8c38-22ff-4c10-a4bb-3b2bec35bcf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audio
+    - media.type.audio
+    - node.type.addition_region
+  content:
+    - 'media:audio:a32703cf-46b0-4852-ae9c-16f5d9e35c8b'
+id: node.addition_region.field_audio
+field_name: field_audio
+entity_type: node
+bundle: addition_region
+label: audio
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: a32703cf-46b0-4852-ae9c-16f5d9e35c8b
+    weight: 0
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
