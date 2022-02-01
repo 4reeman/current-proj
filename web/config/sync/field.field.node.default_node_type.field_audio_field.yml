@@ -1,25 +1,20 @@
-uuid: aa1e8c38-22ff-4c10-a4bb-3b2bec35bcf9
+uuid: ebafffb7-f70e-4501-8335-fb1d1e037fb3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_audio
+    - field.storage.node.field_audio_field
     - media.type.audio
-    - node.type.addition_region
-  content:
-    - 'media:audio:a32703cf-46b0-4852-ae9c-16f5d9e35c8b'
-id: node.addition_region.field_audio
-field_name: field_audio
+    - node.type.default_node_type
+id: node.default_node_type.field_audio_field
+field_name: field_audio_field
 entity_type: node
-bundle: addition_region
+bundle: default_node_type
 label: audio
 description: ''
 required: false
 translatable: false
-default_value:
-  -
-    target_uuid: a32703cf-46b0-4852-ae9c-16f5d9e35c8b
-    weight: 0
+default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:media'

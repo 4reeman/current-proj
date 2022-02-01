@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.pager_titles
     - field.field.node.default_node_type.body
+    - field.field.node.default_node_type.field_audio_field
     - field.field.node.default_node_type.field_comment_f_node
     - field.field.node.default_node_type.field_editor_picks
     - field.field.node.default_node_type.field_img_under_body
@@ -27,6 +28,7 @@ mode: pager_titles
 content: {  }
 hidden:
   body: true
+  field_audio_field: true
   field_comment_f_node: true
   field_editor_picks: true
   field_img_under_body: true
