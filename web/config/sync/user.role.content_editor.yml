@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.basic_html
     - node.type.article
+    - node.type.default_node_type
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
@@ -34,22 +35,32 @@ permissions:
   - 'access tour'
   - 'administer comment types'
   - 'administer comments'
+  - 'administer nodes'
   - 'administer url aliases'
   - 'configure social link field'
   - 'create article content'
+  - 'create default_node_type content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete any default_node_type content'
   - 'delete article revisions'
+  - 'delete default_node_type revisions'
   - 'delete own article content'
+  - 'delete own default_node_type content'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit any default_node_type content'
   - 'edit own article content'
   - 'edit own comments'
+  - 'edit own default_node_type content'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'revert default_node_type revisions'
   - 'use text format basic_html'
   - 'view all revisions'
+  - 'view default_node_type revisions'
   - 'view own unpublished content'
   - 'view the administration theme'
