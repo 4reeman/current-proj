@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.default_node_type.body
+    - field.field.node.default_node_type.field_audio_field
     - field.field.node.default_node_type.field_comment_f_node
     - field.field.node.default_node_type.field_editor_picks
     - field.field.node.default_node_type.field_img_under_body
@@ -43,6 +44,13 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_audio_field:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_comment_f_node:
     type: comment_default

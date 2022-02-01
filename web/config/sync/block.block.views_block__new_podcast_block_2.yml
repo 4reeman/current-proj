@@ -1,22 +1,22 @@
-uuid: 44ccff2f-3ce8-49bb-9326-040d63193ce3
+uuid: b6a88680-2e8a-4fed-9593-6f995e9b719e
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.additional_region
+    - views.view.new_podcast
   module:
     - system
     - views
   theme:
     - fifth_sub_bootstrap
-id: views_block__additional_region_block_3
+id: views_block__new_podcast_block_2
 theme: fifth_sub_bootstrap
 region: additional_content
-weight: -15
+weight: -16
 provider: null
-plugin: 'views_block:additional_region-block_3'
+plugin: 'views_block:new_podcast-block_2'
 settings:
-  id: 'views_block:additional_region-block_3'
+  id: 'views_block:new_podcast-block_2'
   label: ''
   label_display: visible
   provider: views

@@ -1,12 +1,12 @@
-uuid: 2d97af1b-0a87-4b78-9d66-119b204f777e
+uuid: e311d3c6-8827-4a92-943f-56b3afcb49d1
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-id: node.field_picture
-field_name: field_picture
+id: node.field_audio_field
+field_name: field_audio_field
 entity_type: node
 type: entity_reference
 settings:

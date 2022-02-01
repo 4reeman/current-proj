@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - core.entity_view_mode.node.title_date
     - field.field.node.default_node_type.body
+    - field.field.node.default_node_type.field_audio_field
     - field.field.node.default_node_type.field_comment_f_node
     - field.field.node.default_node_type.field_editor_picks
     - field.field.node.default_node_type.field_img_under_body
@@ -124,5 +125,6 @@ content:
     weight: 7
     region: content
 hidden:
+  field_audio_field: true
   field_editor_picks: true
   links: true

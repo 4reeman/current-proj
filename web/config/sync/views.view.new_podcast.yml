@@ -1,20 +1,20 @@
-uuid: 92344087-5510-4c98-a677-64fef5219440
+uuid: b934c092-3bc1-4b12-a5ad-2f2e4cf50bb4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_audio
-    - field.storage.node.field_picture
+    - field.storage.node.field_audio_field
+    - field.storage.node.field_img_under_body
     - image.style.profile_image
-    - node.type.addition_region
+    - node.type.default_node_type
   module:
     - media
     - node
     - user
-id: additional_region
-label: 'Additional Region'
+id: new_podcast
+label: 'New Podcast'
 module: views
-description: 'under first region'
+description: ''
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -90,10 +90,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_picture:
-          id: field_picture
-          table: node__field_picture
-          field: field_picture
+        field_audio_field:
+          id: field_audio_field
+          table: node__field_audio_field
+          field: field_audio_field
           relationship: none
           group_type: group
           admin_label: ''
@@ -140,75 +140,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: media_thumbnail
+          type: entity_reference_entity_view
           settings:
-            image_link: ''
-            image_style: profile_image
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
+            view_mode: default
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -286,10 +220,75 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_audio:
-          id: field_audio
-          table: node__field_audio
-          field: field_audio
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_img_under_body:
+          id: field_img_under_body
+          table: node__field_img_under_body
+          field: field_img_under_body
           relationship: none
           group_type: group
           admin_label: ''
@@ -336,9 +335,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: entity_reference_entity_view
+          type: media_thumbnail
           settings:
-            view_mode: default
+            image_link: ''
+            image_style: profile_image
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -353,7 +353,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 1
+          items_per_page: 5
       exposed_form:
         type: basic
         options:
@@ -412,10 +412,54 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            addition_region: addition_region
+            default_node_type: default_node_type
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_audio_field_target_id:
+          id: field_audio_field_target_id
+          table: node__field_audio_field
+          field: field_audio_field_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: '!='
+          value:
+            min: ''
+            max: ''
+            value: anything
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
       row:
@@ -428,18 +472,7 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: author
-          entity_type: node
-          entity_field: uid
-          plugin_id: standard
-          required: false
+      relationships: {  }
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -451,8 +484,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_audio'
-        - 'config:field.storage.node.field_picture'
+        - 'config:field.storage.node.field_audio_field'
+        - 'config:field.storage.node.field_img_under_body'
   block_1:
     id: block_1
     display_title: 'New Podcast'
@@ -470,11 +503,11 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_audio'
-        - 'config:field.storage.node.field_picture'
+        - 'config:field.storage.node.field_audio_field'
+        - 'config:field.storage.node.field_img_under_body'
   block_2:
     id: block_2
-    display_title: newsletter
+    display_title: 'Subscribe to our newsletter'
     display_plugin: block
     position: 2
     display_options:
@@ -644,7 +677,7 @@ display:
       defaults:
         title: false
         fields: false
-      display_description: 'To be updated with all the latest news, offers and special announcements.'
+      display_description: ''
       display_extenders: {  }
       block_description: 'Subscribe to our newsletter'
     cache_metadata:
@@ -661,8 +694,70 @@ display:
     display_plugin: block
     position: 3
     display_options:
-      title: 'Stay Connected'
       fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         nothing:
           id: nothing
           table: views
@@ -713,7 +808,6 @@ display:
           empty_zero: false
           hide_alter_empty: false
       defaults:
-        title: false
         fields: false
       display_description: ''
       display_extenders: {  }
@@ -721,6 +815,7 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
+        - 'languages:language_content'
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
