@@ -28,4 +28,5 @@
 
 #Ignore database dump file
 database.sql
-
+database_1.sql
+database_2.sql

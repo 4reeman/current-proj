@@ -1,0 +1,18 @@
+uuid: d87b156e-3053-42bc-9bca-f66efefab46f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Addition region'
+type: addition_region
+description: 'under First region content'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
