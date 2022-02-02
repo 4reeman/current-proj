@@ -17,12 +17,14 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/admin_toolbar": "^3.0",
+        "drupal/better_exposed_filters": "^5.0",
         "drupal/bootstrap_sass": "^5.0",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/devel": "^4.1",
         "drupal/fixed_block_content": "^1.1",
+        "drupal/jquery_ui_touch_punch": "^1.0",
         "drupal/social_link_field": "^1.1@alpha",
         "drupal/social_media": "^1.8",
         "drush/drush": "^10.2"

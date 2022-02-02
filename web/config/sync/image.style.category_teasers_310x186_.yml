@@ -1,0 +1,22 @@
+uuid: 9695b50c-16f4-4c80-a6b4-c3cef3d02d8c
+langcode: en
+status: true
+dependencies: {  }
+name: category_teasers_310x186_
+label: 'Category Teasers (310x187)'
+effects:
+  3a6a2d40-4782-4268-8055-298dfee40a19:
+    uuid: 3a6a2d40-4782-4268-8055-298dfee40a19
+    id: image_resize
+    weight: 1
+    data:
+      width: 310
+      height: 187
+  f5e15d82-7f3a-40eb-b8d5-1762f6da27dc:
+    uuid: f5e15d82-7f3a-40eb-b8d5-1762f6da27dc
+    id: image_crop
+    weight: 2
+    data:
+      width: 310
+      height: 187
+      anchor: center-center
