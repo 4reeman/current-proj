@@ -1,0 +1,22 @@
+uuid: 9e5948bc-9ad4-46b7-8469-63da38e7347e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_descr
+  module:
+    - user
+id: user.user.field_descr
+field_name: field_descr
+entity_type: user
+bundle: user
+label: 'Description of work experience'
+description: 'Emilio Montes has worked a Pulses PRO since its launch in 2011. In the years since, he has led by example the company''s tech news team and published over 5,000 articles — a mix of breaking news, reviews, helpful how-tos, industry analysis, and more.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Emilio Montes has worked a Pulses PRO since its launch in 2011. In the years since, he has led by example the company''s tech news team and published over 5,000 articles — a mix of breaking news, reviews, helpful how-tos, industry analysis, and more.'
+default_value_callback: ''
+settings: {  }
+field_type: string

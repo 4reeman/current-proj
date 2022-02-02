@@ -1,0 +1,22 @@
+uuid: 0c62020f-0b7b-4eab-bd94-2e56fec51d55
+langcode: en
+status: true
+dependencies: {  }
+name: editor_pro
+label: 'Editor profile (120x120)'
+effects:
+  c82fdd58-7e40-4c68-94d9-324618b236b8:
+    uuid: c82fdd58-7e40-4c68-94d9-324618b236b8
+    id: image_resize
+    weight: 1
+    data:
+      width: 120
+      height: 120
+  06272ed2-4c10-47a2-b5c1-b506f8dca1b3:
+    uuid: 06272ed2-4c10-47a2-b5c1-b506f8dca1b3
+    id: image_crop
+    weight: 2
+    data:
+      width: 120
+      height: 120
+      anchor: center-center
