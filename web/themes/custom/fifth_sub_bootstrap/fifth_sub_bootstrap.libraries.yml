@@ -4,6 +4,7 @@ global-styling:
     js/bootstrap.min.js: { weight: -48 }
     js/barrio.js: {}
     js/custom.js: {}
+    dist/main.js: {}
   css:
     component:
       css/style.css: {}
