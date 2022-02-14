@@ -13,7 +13,7 @@ _core:
 id: fifth_sub_bootstrap_account_menu
 theme: fifth_sub_bootstrap
 region: top_header
-weight: 0
+weight: -18
 provider: null
 plugin: 'system_menu_block:account'
 settings:

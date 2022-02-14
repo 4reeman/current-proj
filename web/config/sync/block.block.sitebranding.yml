@@ -9,7 +9,7 @@ dependencies:
 id: sitebranding
 theme: fifth_sub_bootstrap
 region: footer_fifth
-weight: -16
+weight: -18
 provider: null
 plugin: system_branding_block
 settings:

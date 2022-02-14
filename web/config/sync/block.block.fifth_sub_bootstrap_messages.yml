@@ -11,7 +11,7 @@ _core:
 id: fifth_sub_bootstrap_messages
 theme: fifth_sub_bootstrap
 region: top_header
-weight: 0
+weight: -19
 provider: null
 plugin: system_messages_block
 settings:

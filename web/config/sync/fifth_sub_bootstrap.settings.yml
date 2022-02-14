@@ -15,7 +15,7 @@ bootstrap_barrio_navbar_toggle: navbar-toggleable-lg
 bootstrap_barrio_navbar_container: 0
 bootstrap_barrio_navbar_top_position: ''
 bootstrap_barrio_navbar_top_color: navbar-dark
-bootstrap_barrio_navbar_top_background: bg-secondary
+bootstrap_barrio_navbar_top_background: ''
 bootstrap_barrio_navbar_position: ''
 bootstrap_barrio_navbar_color: navbar-dark
 bootstrap_barrio_navbar_background: bg-primary
@@ -38,7 +38,7 @@ favicon:
   use_default: 1
 bootstrap_barrio_source: '0'
 bootstrap_barrio_region_clean_top_header: 0
-bootstrap_barrio_region_class_top_header: row
+bootstrap_barrio_region_class_top_header: ''
 bootstrap_barrio_region_clean_header: 1
 bootstrap_barrio_region_class_header: ''
 bootstrap_barrio_region_clean_header_form: 0
@@ -64,7 +64,7 @@ bootstrap_barrio_region_class_sidebar_third: ''
 bootstrap_barrio_region_clean_sidebar_fourth: 1
 bootstrap_barrio_region_class_sidebar_fourth: ''
 bootstrap_barrio_region_clean_special_content: 0
-bootstrap_barrio_region_class_special_content: row
+bootstrap_barrio_region_class_special_content: ''
 bootstrap_barrio_region_clean_content_third_group: 0
 bootstrap_barrio_region_class_content_third_group: row
 bootstrap_barrio_region_clean_sidebar_fifth: 1
