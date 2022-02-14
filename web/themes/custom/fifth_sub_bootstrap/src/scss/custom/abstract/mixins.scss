@@ -1,0 +1,9 @@
+@mixin def_link($color, $hover_color, $hover_underline: false) {
+  color: $color;
+  &:hover {
+    color: $hover_color;
+    @if $hover_underline {
+      text-decoration: underline;
+    }
+  }
+}

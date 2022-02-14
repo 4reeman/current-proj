@@ -1,0 +1,15 @@
+.region-top-header {
+  display: flex;
+  background: black;
+  .view-about-us {
+    .view-content {
+      display: flex;
+      &  > div {
+        padding: 0.5rem;
+        a {
+          @include def_link(white, purple);
+        }
+      }
+    }
+  }
+}

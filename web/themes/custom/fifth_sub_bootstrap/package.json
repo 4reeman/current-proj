@@ -1,42 +1,34 @@
 {
-  "name": "barrio_sass",
-  "version": "5.1.0",
-  "description": "Barrio SASS implementation",
+  "name": "fifth_sub_bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap 4 - Barrio SASS Starter Kit",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "node-sass": "^7.0.1",
+    "npm": "^8.5.0",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.3.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
   },
-  "keywords": [
-    "SASS",
-    "Bootstrap",
-    "Drupal",
-    "Barrio"
-  ],
-  "author": "@hatuhay",
-  "license": "MIT",
   "dependencies": {
     "@popperjs/core": "^2.9.2",
-    "bootstrap": "^5.1.0",
-    "bootstrap-icons": "^1.4.0",
-    "mdbootstrap": "^4.20.0"
+    "bootstrap": "^5.1.0"
   },
-  "devDependencies": {
-    "browser-sync": "^2.24.7",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-clean-css": "3.9.4",
-    "gulp-concat": "^2.6.1",
-    "gulp-html-replace": "^1.6.2",
-    "gulp-load-plugins": "^2.0.4",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.1",
-    "gulp-scss-lint": "^1.0.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "merge-stream": "^1.0.1",
-    "postcss-inline-svg": "^4.1.0",
-    "postcss-pxtorem": "^5.1.1"
-  }
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "build:dev": "webpack --config webpack.config.js --mode development",
+    "start": "webpack --watch",
+    "start:dev": "webpack --watch --mode development"
+  },
+  "author": "",
+  "license": "ISC"
 }
