@@ -71,14 +71,20 @@
   <div id="page">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
       {% block head %}
-        {% if page.top_header  %}
-          <nav>
+        {% if page.secondary_menu or page.top_header or page.top_header_form %}
+          <nav class="bg-black d-none d-md-flex">
             {% if container_navbar %}
-              <div class="container">
-            {% endif %}
+            <div class="container">
+              {% endif %}
+              {{ page.secondary_menu }}
               {{ page.top_header }}
-            {% if container_navbar %}
-              </div>
+              {% if page.top_header_form %}
+                <div class="form-inline navbar-form ml-auto">
+                  {{ page.top_header_form }}
+                </div>
+              {% endif %}
+              {% if container_navbar %}
+            </div>
             {% endif %}
           </nav>
         {% endif %}

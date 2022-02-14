@@ -1,15 +1,24 @@
+#header > nav:nth-child(1) {
+  display: flex;
+  justify-content: center;
+}
 .region-top-header {
   display: flex;
+  justify-content: space-between;
   background: black;
+  width: 1560px;
+  padding: 0 1rem;
   .view-about-us {
     .view-content {
       display: flex;
       &  > div {
         padding: 0.5rem;
+        width: fit-content;
         a {
-          @include def_link(white, purple);
+          @include def_link($text-color, $text-hov-color);
         }
       }
     }
   }
 }
+
