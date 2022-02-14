@@ -3,8 +3,10 @@ global-styling:
   js:
     dist/scripts.bundle.js: {}
   css:
-    component:
+    base:
       dist/styles.css: {}
+    theme:
+      dist/reset.css: {}
   dependencies:
     - core/jquery
     - core/drupal

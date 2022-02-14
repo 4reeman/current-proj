@@ -5,6 +5,7 @@ const devMode = process.env.NODE_ENV !== "production";
 module.exports = {
   entry: {
     styles: path.resolve(__dirname, './src/styles'),
+    reset: path.resolve(__dirname, './src/reset'),
     scripts: path.resolve(__dirname, './src/scripts')
   },
    output: {
