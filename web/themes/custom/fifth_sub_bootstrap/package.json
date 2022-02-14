@@ -9,6 +9,7 @@
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
+    "graceful-fs": "^4.2.9",
     "mini-css-extract-plugin": "^2.5.3",
     "node-sass": "^7.0.1",
     "npm": "^8.5.0",

@@ -1,4 +1,9 @@
 @import "abstract/mixins";
+@import "abstract/variables";
 
 //components
 @import 'components/top_header_styles';
+
+
+//mediaQuery
+@import 'mediaQuery/query_import';
