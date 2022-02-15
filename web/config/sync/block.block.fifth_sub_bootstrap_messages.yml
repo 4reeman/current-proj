@@ -1,6 +1,6 @@
 uuid: a64b61e2-333e-4939-b642-d0a24e3d12e6
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: fifth_sub_bootstrap_messages
 theme: fifth_sub_bootstrap
 region: top_header
-weight: -18
+weight: -9
 provider: null
 plugin: system_messages_block
 settings:

@@ -8,8 +8,8 @@ _core:
   default_config_hash: XRdb8LpbArVA6CpuuEZxzi50JIdjsJaCCZ5o3fH0Blk
 id: fifth_sub_bootstrap_local_actions
 theme: fifth_sub_bootstrap
-region: content
-weight: -20
+region: top_header
+weight: -10
 provider: null
 plugin: local_actions_block
 settings:
