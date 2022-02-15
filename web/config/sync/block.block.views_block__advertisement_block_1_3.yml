@@ -1,25 +1,24 @@
-uuid: 47529665-02a6-465b-8090-1abb4b6c8f9f
+uuid: 933919fa-a61e-4f4c-86a4-8ef1caabf3b1
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.about_us
+    - views.view.advertisement
   module:
     - views
   theme:
     - fifth_sub_bootstrap
-id: views_block__about_us_block_1_2
+id: views_block__advertisement_block_1_3
 theme: fifth_sub_bootstrap
-region: top_header
+region: advertisement
 weight: -20
 provider: null
-plugin: 'views_block:about_us-block_1'
+plugin: 'views_block:advertisement-block_1'
 settings:
-  id: 'views_block:about_us-block_1'
+  id: 'views_block:advertisement-block_1'
   label: ''
   label_display: '0'
   provider: views
-  context_mapping: {  }
   views_label: ''
-  items_per_page: none
+  items_per_page: '1'
 visibility: {  }

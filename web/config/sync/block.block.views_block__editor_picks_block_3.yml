@@ -11,8 +11,8 @@ dependencies:
     - fifth_sub_bootstrap
 id: views_block__editor_picks_block_3
 theme: fifth_sub_bootstrap
-region: content
-weight: 0
+region: main_first
+weight: -20
 provider: null
 plugin: 'views_block:editor_picks-block_3'
 settings:

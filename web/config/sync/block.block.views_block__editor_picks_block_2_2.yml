@@ -1,17 +1,16 @@
-uuid: a69138a8-a7ee-4c7e-b576-567a6417cd7c
+uuid: e1107e8e-c72f-4498-a3fc-7250e23e88a7
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.editor_picks
   module:
-    - system
     - views
   theme:
     - fifth_sub_bootstrap
-id: views_block__editor_picks_block_2
+id: views_block__editor_picks_block_2_2
 theme: fifth_sub_bootstrap
-region: sidebar_first
+region: left_side_first
 weight: 0
 provider: null
 plugin: 'views_block:editor_picks-block_2'
@@ -20,10 +19,7 @@ settings:
   label: ''
   label_display: '0'
   provider: views
+  context_mapping: {  }
   views_label: ''
   items_per_page: none
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '<front>'
+visibility: {  }

@@ -1,6 +1,6 @@
 uuid: a6fc4b5f-bbfd-4bae-acfd-f2069a1461e2
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - fifth_sub_bootstrap
@@ -8,8 +8,8 @@ _core:
   default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
 id: fifth_sub_bootstrap_page_title
 theme: fifth_sub_bootstrap
-region: content
-weight: -50
+region: top_header
+weight: -17
 provider: null
 plugin: page_title_block
 settings:

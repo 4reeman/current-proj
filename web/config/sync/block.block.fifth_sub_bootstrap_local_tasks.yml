@@ -8,8 +8,8 @@ _core:
   default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
 id: fifth_sub_bootstrap_local_tasks
 theme: fifth_sub_bootstrap
-region: content
-weight: -40
+region: top_header
+weight: -15
 provider: null
 plugin: local_tasks_block
 settings:

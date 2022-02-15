@@ -1,0 +1,24 @@
+uuid: ccbde5c0-5ab5-4462-99f1-f25ba27a1c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.advertisement
+  module:
+    - text
+id: node.advertisement.field_name
+field_name: field_name
+entity_type: node
+bundle: advertisement
+label: namespace
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Advertisement</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

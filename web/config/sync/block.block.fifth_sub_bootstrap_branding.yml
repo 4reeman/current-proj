@@ -10,8 +10,8 @@ _core:
   default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
 id: fifth_sub_bootstrap_branding
 theme: fifth_sub_bootstrap
-region: header
-weight: 0
+region: top_header
+weight: -19
 provider: null
 plugin: system_branding_block
 settings:

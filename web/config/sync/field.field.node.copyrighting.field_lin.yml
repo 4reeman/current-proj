@@ -1,0 +1,21 @@
+uuid: 65297429-a7f1-4ab5-9769-5760c486dad0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lin
+    - node.type.copyrighting
+  module:
+    - social_link_field
+id: node.copyrighting.field_lin
+field_name: field_lin
+entity_type: node
+bundle: copyrighting
+label: links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: social_links

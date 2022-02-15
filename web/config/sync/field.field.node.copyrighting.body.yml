@@ -1,0 +1,23 @@
+uuid: 86502119-5351-4570-bcf4-3d05c2735226
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.copyrighting
+  module:
+    - text
+id: node.copyrighting.body
+field_name: body
+entity_type: node
+bundle: copyrighting
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
