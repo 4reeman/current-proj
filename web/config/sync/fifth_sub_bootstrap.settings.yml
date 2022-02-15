@@ -79,9 +79,9 @@ bootstrap_barrio_image_fluid: 0
 bootstrap_barrio_navbar_top_navbar: 0
 bootstrap_barrio_navbar_top_class: ''
 bootstrap_barrio_navbar_class: ''
-bootstrap_barrio_navbar_offcanvas: ''
+bootstrap_barrio_navbar_offcanvas: offcanvas-collapse
 bootstrap_barrio_navbar_flyout: 0
-bootstrap_barrio_navbar_slide: 0
+bootstrap_barrio_navbar_slide: 1
 bootstrap_barrio_tabs_style: ''
 bootstrap_barrio_navbar_top_affix: 0
 bootstrap_barrio_navbar_affix: 0
