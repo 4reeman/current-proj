@@ -126,51 +126,40 @@
       {% block content %}
         <div id="main" class="{{ container }}">
           <div class="row row-offcanvas row-offcanvas-left clearfix">
-            {% if page.left_side_first %}
-              <div class="first-r-left col-12 col-md-6 ">
-                {{ page.left_side_first}}
+            <main{{ content_attributes }}>
+              <section class="section">
+                <a id="main-content" tabindex="-1"></a>
+                {{ page.content}}
+              </section>
+            </main>
+            {% if page.sidebar_first %}
+              <div{{ sidebar_first_attributes }}>
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_first }}
+                </aside>
               </div>
             {% endif %}
-            {% if page.main_first %}
-              <div class="first-r-main col-12 col-md-3">
-                {{ page.main_first }}
+            {% if page.sidebar_second %}
+              <div{{ sidebar_second_attributes }}>
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_second }}
+                </aside>
               </div>
             {% endif %}
-            {% if page.main_first and page.right_side_first %}
-            {% endif %}
-            {% if page.right_side_first %}
-              <div class="first-r-right col-12 col-md-3">
-                {{ page.right_side_first }}
-              </div>
-            {% endif %}
-{#            {% if page.sidebar_first %}#}
-{#              <div{{ sidebar_first_attributes }}>#}
-{#                <aside class="section" role="complementary">#}
-{#                  {{ page.sidebar_first }}#}
-{#                </aside>#}
-{#              </div>#}
-{#            {% endif %}#}
-{#            {% if page.sidebar_second %}#}
-{#              <div{{ sidebar_second_attributes }}>#}
-{#                <aside class="section" role="complementary">#}
-{#                  {{ page.sidebar_second }}#}
-{#                </aside>#}
-{#              </div>#}
-{#            {% endif %}#}
           </div>
         </div>
       {% endblock %}
       {# custom #}
       <div class="{{ container }}">
-        <div class="additional-content d-flex">
+        <div class="additional-content" >
           {{ page.additional_content }}
         </div>
       </div>
-      <div id="main" class="{{ container }}">
+      <div class="{{ container }}">
         <div class="row row-offcanvas row-offcanvas-left clearfix">
-          <main{{ content_attributes }}>
+          <main class="main-content col">
             <section class="section">
-              <a id="main-content" tabindex="-1"></a>
+              <a tabindex="-1"></a>
               {{ page.content_second_group }}
             </section>
           </main>
@@ -192,11 +181,8 @@
       </div>
       {# end custom #}
       {# custom-1 #}
-      <div class="{{ container }}">
+      <div class = "container-fluid">
         {{ page.special_content }}
-      </div>
-      <div class="{{ container }}">
-        {{ page.advertisement }}
       </div>
       {# end custom-1 #}
       {# custom-2 #}
