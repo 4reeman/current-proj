@@ -12,4 +12,8 @@ function fifth_sub_bootstrap_preprocess_node(&$variables) {
 //  $query = \Drupal::entityQuery();
 //  $query = \Drupal::database()->select()
   $variables['comment_count'] = 100500;
+
+}
+function fifth_sub_bootstrap_preprocess_page(&$variables) {
+  $variables['navbar_collapse_class'] = "offcanvas offcanvas-start";
 }

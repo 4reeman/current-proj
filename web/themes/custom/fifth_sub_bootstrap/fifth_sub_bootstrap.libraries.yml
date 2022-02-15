@@ -4,10 +4,10 @@ global-styling:
     dist/scripts.bundle.js: {}
   css:
     base:
-      dist/styles.css: {}
+      dist/styles.css: { minified: true }
     theme:
       dist/reset.css: {}
   dependencies:
     - core/jquery
-    - core/drupal
+    - core/jquery.once
     - core/popperjs
