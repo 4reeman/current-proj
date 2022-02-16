@@ -10,8 +10,8 @@ _core:
   default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
 id: fifth_sub_bootstrap_content
 theme: fifth_sub_bootstrap
-region: content
-weight: 0
+region: top_header
+weight: -11
 provider: null
 plugin: system_main_block
 settings:

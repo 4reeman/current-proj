@@ -12,7 +12,7 @@ dependencies:
 id: views_block__third_region_block_2
 theme: fifth_sub_bootstrap
 region: sidebar_sixth
-weight: -16
+weight: -20
 provider: null
 plugin: 'views_block:third_region-block_2'
 settings:

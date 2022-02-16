@@ -1,0 +1,18 @@
+uuid: 8b8e00a6-a2d3-4bf4-9764-07aff8ba010a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Copyrighting
+type: copyrighting
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,40 @@
+uuid: 62e0fcaa-4aa7-4310-a624-4078b37e1438
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.copyrighting.body
+    - field.field.node.copyrighting.field_lin
+    - node.type.copyrighting
+  module:
+    - social_link_field
+    - text
+    - user
+id: node.copyrighting.default
+targetEntityType: node
+bundle: copyrighting
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_lin:
+    type: font_awesome
+    label: above
+    settings:
+      icon_type: common
+      orientation: vertical
+      new_tab: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
