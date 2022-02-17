@@ -850,7 +850,7 @@ display:
           entity_field: uid
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -917,8 +917,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"d-flex public\">\r\n{{ uid }}\r\n{{ changed }}\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1418,7 +1418,7 @@ display:
           entity_field: uid
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1485,8 +1485,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"d-flex public\">\r\n{{ uid }}\r\n{{ changed }}\r\n</div>"
             make_link: false
             path: ''
             absolute: false
