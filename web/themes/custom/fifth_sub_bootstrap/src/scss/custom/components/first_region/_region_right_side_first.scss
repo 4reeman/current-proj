@@ -1,0 +1,28 @@
+.block-views-blockeditor-picks-block-1 {
+  @include float_picture_text(true);
+}
+.block-views-blockeditor-picks-block-4 {
+  @include float_picture_text(true);
+}
+.block-views-blockadvertisement-block-1 {
+  .views-row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .views-field-field-name {
+    display: flex;
+    justify-content: center;
+    &:before,
+    &:after {
+      content: " - ";
+      padding: 0 0.2rem;
+    }
+  }
+  .views-field-field-pic {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}

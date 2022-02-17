@@ -7,3 +7,21 @@
     }
   }
 }
+
+@mixin float_picture_text($circle:false) {
+  .views-row {
+    padding-bottom: 4.5rem;
+    .views-field-title {
+      padding-right: 105px;
+      overflow-wrap: break-word;
+    }
+    .views-field-field-main-node-img {
+      float: right;
+      @if $circle {
+        img {
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}

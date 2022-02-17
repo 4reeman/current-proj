@@ -1,5 +1,6 @@
 .views-field-name {
-  margin-top: -1.3rem;
+  margin-top: -1.25rem;
+  line-height: normal;
   span {
     background-color: $main-purple;
     padding: 0.125rem 0.6rem;
@@ -11,13 +12,23 @@
   }
 }
 .views-field-title {
+  line-height: 1.1;
   font-size: 17px;
-  color: $title-default;
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+  a {
+    color: $title-default;
+  }
 }
 
 .views-field-uid, .views-field-changed, .views-field-created, .views-field-revision-timestamp {
   font-size: 13px;
   font-style: italic;
+  margin: 0 0 0.5rem 0;
+  a {
+    padding-right: 0.2rem;
+    color: $title-default;
+  }
 }
 
 
