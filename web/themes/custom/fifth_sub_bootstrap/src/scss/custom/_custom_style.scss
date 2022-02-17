@@ -1,5 +1,8 @@
-@import "abstract/mixins";
 @import "abstract/variables";
+@import "abstract/mixins";
+
+//general
+@import "general/view_hover";
 
 //components
 @import 'components/top_header_styles';
