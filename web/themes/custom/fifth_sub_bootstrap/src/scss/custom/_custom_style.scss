@@ -2,11 +2,14 @@
 @import "abstract/mixins";
 
 //general
-@import "general/view_hover";
+@import "general/view";
+@import "general/sections";
+@import "general/views_view_fields";
 
 //components
 @import 'components/top_header_styles';
 @import 'components/main_header_styles';
+@import "components/first_region_styles";
 
 //mediaQuery
 @import 'mediaQuery/query_import';

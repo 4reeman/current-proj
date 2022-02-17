@@ -1,0 +1,10 @@
+.views-row {
+  &:hover {
+    .views-field-title {
+      a {
+        color: $main-purple;
+      }
+    }
+  }
+}
+

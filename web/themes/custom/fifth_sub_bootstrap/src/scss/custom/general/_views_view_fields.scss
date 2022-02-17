@@ -1,0 +1,33 @@
+.views-field-name {
+  margin-top: -1.3rem;
+  span {
+    background-color: $main-purple;
+    padding: 0.125rem 0.6rem;
+    font-size: 10px;
+    letter-spacing: 1px;
+    a {
+      color: $main-white;
+    }
+  }
+}
+.views-field-title {
+  font-size: 17px;
+  color: $title-default;
+}
+
+.views-field-uid, .views-field-changed, .views-field-created, .views-field-revision-timestamp {
+  font-size: 13px;
+  font-style: italic;
+}
+
+
+.views-field-field-main-node-img {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.views-field-field-title-for-article {
+  font-size: 15px;
+}
