@@ -1,0 +1,22 @@
+.block-views-blocknew-podcast-block-1,
+.block-views-blocknew-podcast-block-2,
+.block-views-blocknew-podcast-block-3 {
+  padding: 1.25rem 1.5rem 0 1.5rem;
+  margin: 0 1rem;
+  background: $blocks_bckg;
+}
+.additional-content {
+  display: flex;
+  justify-content: space-between;
+}
+.block-views-blocknew-podcast-block-1 {
+  .view-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img {
+    float: right;
+    border-radius: 100%;
+  }
+}
