@@ -1,6 +1,11 @@
 .container-fluid {
-  padding: 0 0 0.75rem 0;
+  padding: 0.75rem 1.25rem 0 1.25rem;
   &:first-child {
     padding-top: 2.5rem;
   }
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }

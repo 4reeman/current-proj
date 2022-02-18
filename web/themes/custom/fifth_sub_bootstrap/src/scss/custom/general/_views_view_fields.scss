@@ -1,10 +1,10 @@
 .views-field-name {
-  margin-top: -1.25rem;
-  line-height: normal;
+  @include rfs(-1.75rem, margin-top);
+  line-height: 2;
   span {
     background-color: $main-purple;
     padding: 0.125rem 0.6rem;
-    font-size: 10px;
+    @include rfs(0.625rem);
     letter-spacing: 1px;
     a {
       color: $main-white;
@@ -13,32 +13,39 @@
 }
 .views-field-title {
   line-height: 1.1;
-  font-size: 17px;
+  @include rfs(1.0625rem);
   font-weight: 700;
   margin: 0.5rem 0 0 0;
   a {
     color: $title-default;
   }
 }
-
-.views-field-uid, .views-field-changed, .views-field-created, .views-field-revision-timestamp {
-  font-size: 13px;
+.views-field-uid, .views-field-changed, .views-field-created, .views-field-revision-timestamp, .views-field-changed-1 {
+  @include rfs(0.8125rem);
   font-style: italic;
-  margin: 0 0 0.5rem 0;
   a {
-    padding-right: 0.2rem;
     color: $title-default;
   }
 }
-
-
-.views-field-field-main-node-img {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+.views-field-changed-1 {
+  padding: 0 0 0 0.2rem;
 }
-
+.sidebars_group {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  padding: 0 0.3rem 0 0;
+}
 .views-field-field-title-for-article {
   font-size: 15px;
+  padding: 15px 0 0 0;
+}
+.views-field-uid {
+  &:after {
+    display: inline;
+    content: ' -';
+  }
+}
+.author_date {
+  display: flex;
 }

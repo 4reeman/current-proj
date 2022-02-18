@@ -1,8 +1,5 @@
 .views-row {
   padding-bottom: 2.25rem;
-  //&:last-child {
-  //  padding-bottom: 0;
-  //}
   &:hover {
     .views-field-title {
       a {
@@ -14,7 +11,7 @@
 .views-element-container {
   h2 {
     color: $main-purple;
-    font-size: 24px;
+    @include rfs(1.5rem);
     font-weight: 900;
     margin-bottom: 1rem;
   }
