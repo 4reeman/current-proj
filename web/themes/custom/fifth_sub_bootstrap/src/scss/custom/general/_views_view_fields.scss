@@ -20,7 +20,11 @@
     color: $title-default;
   }
 }
-.views-field-uid, .views-field-changed, .views-field-created, .views-field-revision-timestamp, .views-field-changed-1 {
+.views-field-uid,
+.views-field-changed,
+.views-field-created,
+.views-field-revision-timestamp,
+.views-field-changed-1 {
   @include rfs(0.8125rem);
   font-style: italic;
   a {
