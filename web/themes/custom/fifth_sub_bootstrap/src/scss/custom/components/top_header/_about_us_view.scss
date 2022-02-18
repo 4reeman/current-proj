@@ -15,10 +15,9 @@
         padding: 0.5rem;
         width: fit-content;
         a {
-          @include def_link($text-color, $text-hov-color);
+          @include def_link($main-white, $main-purple);
         }
       }
     }
   }
 }
-

@@ -1,0 +1,28 @@
+.block-views-blockeditor-picks-block-1,
+.block-views-blockeditor-picks-block-4 {
+  @include float_picture_text(true);
+}
+.block-views-blockadvertisement-block-1 {
+  .views-row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .views-field-field-pic {
+    width: 100%;
+    img {
+      max-height: 250px;
+    }
+  }
+  .views-field-field-name {
+    color: $advertisement_title;
+    align-items: center;
+    @include rfs(0.625rem);
+    display: flex;
+    justify-content: center;
+    &:before,
+    &:after {
+      content: " - ";
+    }
+  }
+}

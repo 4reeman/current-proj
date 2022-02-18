@@ -7,3 +7,22 @@
     }
   }
 }
+
+@mixin float_picture_text($circle:false) {
+  .views-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    .views-field-title {
+      overflow-wrap: break-word;
+    }
+    .views-field-field-main-node-img {
+      @if $circle {
+        img {
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}

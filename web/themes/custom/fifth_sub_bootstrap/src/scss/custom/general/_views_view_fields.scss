@@ -1,0 +1,55 @@
+.views-field-name {
+  @include rfs(-1.75rem, margin-top);
+  line-height: 2;
+  span {
+    background-color: $main-purple;
+    padding: 0.125rem 0.6rem;
+    @include rfs(0.625rem);
+    letter-spacing: 1px;
+    a {
+      color: $main-white;
+    }
+  }
+}
+.views-field-title {
+  line-height: 1.1;
+  @include rfs(1.0625rem);
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+  a {
+    color: $title-default;
+  }
+}
+.views-field-uid,
+.views-field-changed,
+.views-field-created,
+.views-field-revision-timestamp,
+.views-field-changed-1 {
+  @include rfs(0.8125rem);
+  font-style: italic;
+  a {
+    color: $title-default;
+  }
+}
+.views-field-changed-1 {
+  padding: 0 0 0 0.2rem;
+}
+.sidebars_group {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  padding: 0 0.3rem 0 0;
+}
+.views-field-field-title-for-article {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+.views-field-uid {
+  &:after {
+    display: inline;
+    content: ' -';
+  }
+}
+.author_date {
+  display: flex;
+}

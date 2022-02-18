@@ -1,0 +1,18 @@
+.views-row {
+  padding-bottom: 2.25rem;
+  &:hover {
+    .views-field-title {
+      a {
+        color: $main-purple;
+      }
+    }
+  }
+}
+.views-element-container {
+  h2 {
+    color: $main-purple;
+    @include rfs(1.5rem);
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+}

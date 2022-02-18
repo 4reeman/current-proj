@@ -148,16 +148,14 @@
       {% endblock %}
       {# custom #}
       <div class="{{ container }}">
-        <div class="additional-content d-flex">
+        <div class="section additional-content d-flex">
           {{ page.additional_content }}
         </div>
       </div>
       <div class="{{ container }}">
         <div class="row row-offcanvas row-offcanvas-left clearfix">
           <main{{ content_attributes }}>
-            <section class="section">
               {{ page.content_second_group }}
-            </section>
           </main>
           {% if page.sidebar_third %}
             <div{{ sidebar_first_attributes }}>
@@ -188,10 +186,7 @@
       <div class="{{ container }}">
         <div class="row row-offcanvas row-offcanvas-left clearfix">
           <main class="main-content col">
-            <section class="section">
-              <a tabindex="-1"></a>
               {{ page.content_third_group }}
-            </section>
           </main>
           {% if page.sidebar_fifth %}
             <div{{ sidebar_first_attributes }}>
@@ -217,7 +212,6 @@
           {% if page.footer_fifth %}
             <div class="site-footer__bottom">
               {{ page.footer_fifth }}
-
             </div>
           {% endif %}
         </div>

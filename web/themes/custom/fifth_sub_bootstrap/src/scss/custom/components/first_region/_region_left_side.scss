@@ -1,0 +1,11 @@
+.block-views-blockeditor-picks-block-2 {
+  .views-field-title {
+    @include rfs(2rem);
+  }
+  .views-field-name {
+    margin-top: 0;
+  }
+  .views-field-changed {
+    margin: 0.5rem 0 0 0;
+  }
+}
