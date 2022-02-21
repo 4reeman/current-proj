@@ -1,0 +1,8 @@
+.sidebar_first {
+  .views-row:not(:last-child) {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 1rem;
+  }
+  @include sidebars_button;
+}

@@ -23,6 +23,7 @@ regions:
   additional_content: 'Additional content'
   content_second_group: 'Second group content'
   sidebar_third: 'Sidebar third'
+  sidebar_sub: 'Sidebar sub'
   sidebar_fourth: 'Sidebar fourth'
   special_content: 'Special content'
   advertisement: 'Advertisement'
