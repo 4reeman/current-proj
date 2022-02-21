@@ -100,3 +100,5 @@ bootstrap_barrio_region_clean_right_side_first: 0
 bootstrap_barrio_region_class_right_side_first: ''
 bootstrap_barrio_region_clean_advertisement: 0
 bootstrap_barrio_region_class_advertisement: ''
+bootstrap_barrio_region_clean_sidebar_sub: 0
+bootstrap_barrio_region_class_sidebar_sub: ''
