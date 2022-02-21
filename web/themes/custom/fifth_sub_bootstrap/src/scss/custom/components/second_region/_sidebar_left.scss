@@ -4,5 +4,5 @@
     border-bottom: 1px solid lightgrey;
     margin-bottom: 1rem;
   }
-  @include sidebars_button;
+  @include sidebars_button(100%);
 }

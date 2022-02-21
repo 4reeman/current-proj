@@ -13,14 +13,7 @@
 .sidebar_fourth {
   margin-bottom: 1rem;
 }
-.sidebar {
-  .views-row:not(:last-child) {
-    //padding-bottom: 0.5rem;
-    //border-bottom: 1px solid lightgrey;
-    //margin-bottom: 1rem;
-  }
-}
-@include sidebars_button(60%);
+@include sidebars_button(max-content);
 
 .burger {
   display: block;
