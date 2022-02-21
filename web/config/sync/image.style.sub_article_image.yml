@@ -5,10 +5,11 @@ dependencies: {  }
 name: sub_article_image
 label: 'Sub-article image'
 effects:
-  f96826ef-01ee-47eb-bd1a-a2403c843058:
-    uuid: f96826ef-01ee-47eb-bd1a-a2403c843058
-    id: image_resize
-    weight: 1
+  45cbd666-130e-4936-93c5-08a870d12759:
+    uuid: 45cbd666-130e-4936-93c5-08a870d12759
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 259
       height: 390
+      anchor: center-center

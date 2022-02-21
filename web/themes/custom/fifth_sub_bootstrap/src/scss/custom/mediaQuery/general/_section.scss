@@ -1,5 +1,15 @@
 @media (max-width: 767px) {
-  img {
-    width: 100%;
+  .first-r-main,
+  .first-r-right {
+    img {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .container-fluid {
+    &:nth-child(2) {
+      padding: 0;
+    }
   }
 }

@@ -1,0 +1,31 @@
+@media (max-width: 767px) {
+  .additional-content {
+    flex-direction: column;
+    gap: 1rem;
+    & > div {
+      flex-basis: 100%;
+    }
+    .block-views-blocknew-podcast-block-1 {
+      img,
+      .views-field-uid {
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width: 1136px) {
+  .block-views-blocknew-podcast-block-1,
+  .block-views-blocknew-podcast-block-2,
+  .block-views-blocknew-podcast-block-3 {
+    padding: 1.25rem 0.5rem 0 0.5rem;
+  }
+  .block-views-blocknew-podcast-block-1 {
+    img,
+    .views-field-uid {
+      display: none;
+    }
+    audio {
+      max-width: 80%;
+    }
+  }
+}
