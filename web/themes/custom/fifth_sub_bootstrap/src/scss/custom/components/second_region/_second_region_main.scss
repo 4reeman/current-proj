@@ -1,13 +1,8 @@
 .block-views-blocksecond-region-block-2 {
   .views-row {
     display: flex;
+    width: 100%;
   }
-}
-.main-info {
-  border-top: 1px solid grey;
-  margin: 0 1rem;
-}
-.block-views-blocksecond-region-block-2 {
   .view-header {
     position: absolute;
     opacity: 0.1;
@@ -17,4 +12,9 @@
     font-weight: bold;
     left: -11px;
   }
+}
+.main-info {
+  border-top: 1px solid grey;
+  margin: 0 1rem;
+  width: 100%;
 }
