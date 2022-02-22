@@ -1,4 +1,4 @@
-uuid: 1afbf4a0-361a-45fc-b7b4-6faa6f81340b
+uuid: d662f5f8-bdeb-4397-bc64-8044b7afb1b0
 langcode: en
 status: true
 dependencies:
@@ -9,19 +9,19 @@ dependencies:
     - views
   theme:
     - fifth_sub_bootstrap
-id: views_block__must_read_block_2
+id: views_block__must_read_block_3
 theme: fifth_sub_bootstrap
 region: special_content
 weight: -20
 provider: null
-plugin: 'views_block:must_read-block_2'
+plugin: 'views_block:must_read-block_3'
 settings:
-  id: 'views_block:must_read-block_2'
+  id: 'views_block:must_read-block_3'
   label: ''
   label_display: '0'
   provider: views
   views_label: ''
-  items_per_page: '4'
+  items_per_page: none
 visibility:
   request_path:
     id: request_path
