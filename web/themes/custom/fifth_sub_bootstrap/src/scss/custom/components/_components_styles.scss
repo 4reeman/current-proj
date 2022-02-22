@@ -1,0 +1,12 @@
+//top header region
+@import 'top_header/about_us_view';
+
+//main header region
+@import "main_header/main_header";
+
+//first region
+@import 'first_region/region_left_side';
+@import 'first_region/region_right_side_first';
+
+//additional region
+@import 'additional_content_region/additional_content';

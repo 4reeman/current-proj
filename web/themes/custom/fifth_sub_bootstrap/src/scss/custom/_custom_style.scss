@@ -1,3 +1,4 @@
+//abstract
 @import "abstract/variables";
 @import "abstract/mixins";
 
@@ -7,9 +8,7 @@
 @import "general/views_view_fields";
 
 //components
-@import 'components/top_header_styles';
-@import 'components/main_header_styles';
-@import "components/first_region_styles";
+@import 'components/components_styles';
 
 //mediaQuery
 @import 'mediaQuery/query_import';

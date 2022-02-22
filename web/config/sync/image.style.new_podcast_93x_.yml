@@ -1,0 +1,15 @@
+uuid: 7641d716-3cf1-4126-a198-7ba5ef5a07c3
+langcode: en
+status: true
+dependencies: {  }
+name: new_podcast_93x_
+label: 'New Podcast (93x93)'
+effects:
+  cf2b6c8c-3a3f-497e-ac04-d7d06e7b7513:
+    uuid: cf2b6c8c-3a3f-497e-ac04-d7d06e7b7513
+    id: image_crop
+    weight: 1
+    data:
+      width: 93
+      height: 93
+      anchor: center-center

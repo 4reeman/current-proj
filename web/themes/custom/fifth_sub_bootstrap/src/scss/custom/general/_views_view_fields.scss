@@ -13,7 +13,7 @@
 }
 .views-field-title {
   line-height: 1.1;
-  @include rfs(1.0625rem);
+  @include rfs(1.0625rem, font-size);
   font-weight: 700;
   margin: 0.5rem 0 0 0;
   a {
