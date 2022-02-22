@@ -6,8 +6,8 @@ dependencies:
     - field.storage.node.field_main_node_img
     - field.storage.node.field_title_for_article
     - image.style.editor_picks_profile
-    - image.style.first_region_main_content
     - image.style.small_sub_category
+    - image.style.tesers_297x178_
     - node.type.default_node_type
     - taxonomy.vocabulary.main_page
   module:
@@ -750,7 +750,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: ''
-            image_style: first_region_main_content
+            image_style: tesers_297x178_
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -864,13 +864,13 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: preview
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: preview
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -1170,13 +1170,13 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: div
-          element_class: main_info
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: main_info
           element_default_classes: false
           empty: ''
           hide_empty: false
