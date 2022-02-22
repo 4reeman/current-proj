@@ -3,7 +3,7 @@ _core:
 bootstrap_barrio_library: production
 bootstrap_barrio_sidebar_position: both
 bootstrap_barrio_content_offset: '0'
-bootstrap_barrio_sidebar_first_width: '3'
+bootstrap_barrio_sidebar_first_width: '2'
 bootstrap_barrio_sidebar_first_offset: '0'
 bootstrap_barrio_sidebar_second_width: '3'
 bootstrap_barrio_sidebar_second_offset: '0'
@@ -100,3 +100,5 @@ bootstrap_barrio_region_clean_right_side_first: 0
 bootstrap_barrio_region_class_right_side_first: ''
 bootstrap_barrio_region_clean_advertisement: 0
 bootstrap_barrio_region_class_advertisement: ''
+bootstrap_barrio_region_clean_sidebar_sub: 0
+bootstrap_barrio_region_class_sidebar_sub: ''

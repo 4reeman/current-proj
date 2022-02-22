@@ -1,0 +1,15 @@
+uuid: 78f60743-263f-4457-9ada-d17ee245c8de
+langcode: en
+status: true
+dependencies: {  }
+name: tesers_297x178_
+label: 'tesers 297x178 '
+effects:
+  d7429022-5f04-4ef0-a07c-8673d1d7e4d8:
+    uuid: d7429022-5f04-4ef0-a07c-8673d1d7e4d8
+    id: image_crop
+    weight: 1
+    data:
+      width: 297
+      height: 178
+      anchor: center-center

@@ -1,0 +1,20 @@
+.block-views-blocksecond-region-block-2 {
+  .views-row {
+    display: flex;
+    width: 100%;
+  }
+  .view-header {
+    position: absolute;
+    opacity: 0.1;
+    color: gray;
+    top: -80px;
+    font-size: 60px;
+    font-weight: bold;
+    left: -11px;
+  }
+}
+.main-info {
+  border-top: 1px solid grey;
+  margin: 0 1rem;
+  width: 100%;
+}

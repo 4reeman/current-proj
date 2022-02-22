@@ -5,10 +5,11 @@ dependencies: {  }
 name: editor_picks_profile
 label: 'Editor Picks Profile'
 effects:
-  63c6f086-0962-4370-83db-96eac666bc1c:
-    uuid: 63c6f086-0962-4370-83db-96eac666bc1c
-    id: image_resize
+  ac07faf6-7993-4cb1-a574-8439939f78a1:
+    uuid: ac07faf6-7993-4cb1-a574-8439939f78a1
+    id: image_crop
     weight: 1
     data:
       width: 65
       height: 65
+      anchor: center-center

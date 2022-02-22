@@ -1,14 +1,14 @@
 .views-field-name {
-  @include rfs(-1.75rem, margin-top);
+  @include rfs(-1.6rem, margin-top);
   line-height: 2;
   span {
     background-color: $main-purple;
     padding: 0.125rem 0.6rem;
     @include rfs(0.625rem);
     letter-spacing: 1px;
-    a {
-      color: $main-white;
-    }
+  }
+  a {
+    color: $main-white;
   }
 }
 .views-field-title {

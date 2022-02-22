@@ -11,8 +11,8 @@ dependencies:
     - fifth_sub_bootstrap
 id: views_block__second_region_block_4
 theme: fifth_sub_bootstrap
-region: sidebar_fourth
-weight: -17
+region: sidebar_sub
+weight: -19
 provider: null
 plugin: 'views_block:second_region-block_4'
 settings:

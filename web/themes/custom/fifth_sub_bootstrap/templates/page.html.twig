@@ -158,20 +158,30 @@
               {{ page.content_second_group }}
           </main>
           {% if page.sidebar_third %}
-            <div{{ sidebar_first_attributes }}>
+            <div class="sidebar_first sidebar col-12 col-md-3 col-lg-2 order-first" id="sidebar_first">
               <aside class="section" role="complementary">
                 {{ page.sidebar_third }}
               </aside>
             </div>
           {% endif %}
-          {% if page.sidebar_fourth %}
-            <div{{ sidebar_second_attributes }}>
-              <aside class="section" role="complementary">
-                {{ page.sidebar_fourth }}
-              </aside>
-            </div>
-          {% endif %}
+          <div class="sidebars_right_side col-md-3">
+            {% if page.sidebar_fourth %}
+              <div class="sidebar_fourth sidebar">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_fourth }}
+                </aside>
+              </div>
+            {% endif %}
+            {% if page.sidebar_sub %}
+              <div class="sidebar_sub sidebar" id="sidebar_sub">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_sub }}
+                </aside>
+              </div>
+            {% endif %}
+          </div>
         </div>
+      </div>
       </div>
       {# end custom #}
       {# custom-1 #}

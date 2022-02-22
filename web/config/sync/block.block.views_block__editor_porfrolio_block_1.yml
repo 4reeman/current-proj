@@ -12,7 +12,7 @@ dependencies:
 id: views_block__editor_porfrolio_block_1
 theme: fifth_sub_bootstrap
 region: sidebar_third
-weight: -18
+weight: -19
 provider: null
 plugin: 'views_block:editor_porfrolio-block_1'
 settings:

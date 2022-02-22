@@ -1,0 +1,40 @@
+.sidebar {
+  aside {
+    border: 1px solid grey;
+    padding: 1rem;
+  }
+}
+.sidebars_right_side {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: fit-content;
+}
+.sidebar_fourth {
+  margin-bottom: 1rem;
+}
+@include sidebars_button(max-content);
+
+.burger {
+  display: block;
+  content: '';
+  width: 0.8rem;
+  height: 1px;
+  background: white;
+  margin-left: 1rem;
+  &::before {
+    bottom: 2px;
+  }
+  &::after {
+    top: 2px;
+  }
+  &::before,
+  &::after {
+    position: relative;
+    display: block;
+    content: '';
+    width: 0.8rem;
+    height: 1px;
+    background: white;
+  }
+}

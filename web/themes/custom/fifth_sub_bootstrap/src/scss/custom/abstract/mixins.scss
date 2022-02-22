@@ -32,3 +32,23 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin sidebars_button($width: 100%) {
+  .view-footer {
+    width: $width;
+  }
+  .sidebars_button {
+    @include center;
+    background: $side_button;
+    font-size: 12px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    a {
+      color: $link_text;
+      width: fit-content;
+    }
+    &:hover {
+      background: $side_button_hover;
+    }
+  }
+}

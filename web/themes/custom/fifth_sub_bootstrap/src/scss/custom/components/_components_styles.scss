@@ -10,3 +10,8 @@
 
 //additional region
 @import 'additional_content_region/additional_content';
+
+//second region
+@import "second_region/sidebar_left";
+@import "second_region/sidebar_right";
+@import "second_region/second_region_main";
