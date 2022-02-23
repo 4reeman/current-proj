@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: arts
-label: arts
+label: 'arts 200×110 '
 effects:
   5c065ad8-25e9-4f3b-8249-d178c157d2b1:
     uuid: 5c065ad8-25e9-4f3b-8249-d178c157d2b1

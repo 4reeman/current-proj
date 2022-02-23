@@ -1,0 +1,15 @@
+uuid: bedef31f-76f3-4ecc-928b-ad07c5337eb9
+langcode: en
+status: true
+dependencies: {  }
+name: third_region_742x556
+label: 'Third Region 802×602'
+effects:
+  08281b0f-a9a7-4482-8fbd-0829335aad17:
+    uuid: 08281b0f-a9a7-4482-8fbd-0829335aad17
+    id: image_crop
+    weight: 1
+    data:
+      width: 802
+      height: 602
+      anchor: center-center
