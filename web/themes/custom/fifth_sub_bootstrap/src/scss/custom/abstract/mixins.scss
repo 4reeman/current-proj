@@ -18,6 +18,7 @@
       overflow-wrap: break-word;
     }
     .views-field-field-main-node-img {
+      min-width: fit-content;
       @if $circle {
         img {
           border-radius: 100%;

@@ -30,6 +30,8 @@ regions:
   content_third_group: 'Third group content'
   sidebar_fifth: 'Sidebar fifth'
   sidebar_sixth: 'Sidebar sixth'
+  advertisement_1: 'Advertisement'
+  sidebar_seventh: 'Sidebar seventh'
   footer_fifth: 'Footer fifth'
 
 # Information added by Drupal.org packaging script on 2021-10-11

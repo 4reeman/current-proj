@@ -182,7 +182,6 @@
           </div>
         </div>
       </div>
-      </div>
       {# end custom #}
       {# custom-1 #}
       <div class="{{ container }} special-content">
@@ -199,19 +198,33 @@
               {{ page.content_third_group }}
           </main>
           {% if page.sidebar_fifth %}
-            <div{{ sidebar_first_attributes }}>
+            <div class="sidebar_fifth sidebar col-12 col-md-3 col-lg-2 order-first" id="sidebar_fifth">
               <aside class="section" role="complementary">
                 {{ page.sidebar_fifth }}
               </aside>
             </div>
           {% endif %}
-          {% if page.sidebar_sixth %}
-            <div{{ sidebar_second_attributes }}>
-              <aside class="section" role="complementary">
-                {{ page.sidebar_sixth }}
-              </aside>
-            </div>
-          {% endif %}
+          <div class="sidebars_right_side col-md-3">
+            {% if page.sidebar_sixth %}
+              <div class="sidebar_sixth sidebar" id="sidebar_sixth">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_sixth }}
+                </aside>
+              </div>
+            {% endif %}
+            {% if page.advertisement_1 %}
+              <div class="advertisement_1 sidebar" id="sidebar_sixth">
+                  {{ page.advertisement_1 }}
+              </div>
+            {% endif %}
+            {% if page.sidebar_seventh %}
+              <div class="sidebar_seventh sidebar" id="sidebar_seventh">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_seventh }}
+                </aside>
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
       {# end custom-2 #}
