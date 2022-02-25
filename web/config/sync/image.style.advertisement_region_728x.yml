@@ -1,0 +1,15 @@
+uuid: 392331f4-82cb-4c74-b1c5-8bf710235280
+langcode: en
+status: true
+dependencies: {  }
+name: advertisement_region_728x
+label: 'Advertisement Region 728x90'
+effects:
+  b5fdf862-9719-413f-ac65-8693f4750b3b:
+    uuid: b5fdf862-9719-413f-ac65-8693f4750b3b
+    id: image_crop
+    weight: 1
+    data:
+      width: 728
+      height: 90
+      anchor: center-center

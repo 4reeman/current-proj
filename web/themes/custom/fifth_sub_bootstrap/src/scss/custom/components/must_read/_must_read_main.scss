@@ -1,0 +1,30 @@
+.block-views-blockmust-read-block-3 {
+  background: $main-purple;
+}
+.block-views-blockmust-read-block-1 {
+  .view-display-id-block_1 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    >.view-content {
+      margin-top: -2rem;
+    }
+  }
+  .view-footer {
+    margin-top: 2rem;
+    width: fit-content;
+    .view-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+}
+.must_read {
+  color: $title_color;
+  padding: 1rem 5rem;
+}
+.view-must-read-title {
+  @include rfs(4rem, font-size);
+  font-weight: bold;
+}

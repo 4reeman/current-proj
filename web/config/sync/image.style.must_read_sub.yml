@@ -3,15 +3,8 @@ langcode: en
 status: true
 dependencies: {  }
 name: must_read_sub
-label: 'must read sub'
+label: 'must read sub (384×173)'
 effects:
-  7df28e43-fa44-442f-bf1b-c6046ce871de:
-    uuid: 7df28e43-fa44-442f-bf1b-c6046ce871de
-    id: image_resize
-    weight: 1
-    data:
-      width: 384
-      height: 173
   dbe631d3-1d7a-4794-993a-e60af189386d:
     uuid: dbe631d3-1d7a-4794-993a-e60af189386d
     id: image_crop

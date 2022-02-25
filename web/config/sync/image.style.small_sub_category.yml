@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies: {  }
 name: small_sub_category
-label: 'small sub-category'
+label: 'small sub-category 78×78'
 effects:
-  ceeaf49f-c596-4f4f-8bd1-21283d5c9f60:
-    uuid: ceeaf49f-c596-4f4f-8bd1-21283d5c9f60
-    id: image_scale_and_crop
-    weight: 2
+  2b5afae5-afb0-4908-83ea-ec4915d8dba5:
+    uuid: 2b5afae5-afb0-4908-83ea-ec4915d8dba5
+    id: image_crop
+    weight: 1
     data:
       width: 78
       height: 78

@@ -1,0 +1,15 @@
+uuid: d53d9577-cf86-453c-bf48-d76bd42f0040
+langcode: en
+status: true
+dependencies: {  }
+name: advertisement_330x25
+label: 'Advertisement 330x250'
+effects:
+  3f49b1f3-8d9a-4a7a-9db2-e2d6ad868a94:
+    uuid: 3f49b1f3-8d9a-4a7a-9db2-e2d6ad868a94
+    id: image_crop
+    weight: 1
+    data:
+      width: 330
+      height: 250
+      anchor: center-center

@@ -124,7 +124,7 @@
     </header>
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
       {% block content %}
-        <div id="main" class="{{ container }}">
+        <div id="main" class="{{ container }} main">
           <div class="row row-offcanvas row-offcanvas-left clearfix">
             {% if page.left_side_first %}
               <div class="first-r-left col-12 col-md-6 ">
@@ -147,12 +147,12 @@
         </div>
       {% endblock %}
       {# custom #}
-      <div class="{{ container }}">
+      <div class="{{ container }} additional-content-container">
         <div class="section additional-content">
           {{ page.additional_content }}
         </div>
       </div>
-      <div class="{{ container }}">
+      <div class="{{ container }} content-second-group">
         <div class="row row-offcanvas row-offcanvas-left clearfix">
           <main{{ content_attributes }}>
               {{ page.content_second_group }}
@@ -182,36 +182,49 @@
           </div>
         </div>
       </div>
-      </div>
       {# end custom #}
       {# custom-1 #}
-      <div class="{{ container }}">
+      <div class="{{ container }} special-content">
         {{ page.special_content }}
       </div>
-      <div class="{{ container }}">
+      <div class="{{ container }} advertisement">
         {{ page.advertisement }}
       </div>
       {# end custom-1 #}
       {# custom-2 #}
-      <div class="{{ container }}">
+      <div class="{{ container }} content-third-group">
         <div class="row row-offcanvas row-offcanvas-left clearfix">
           <main class="main-content col">
               {{ page.content_third_group }}
           </main>
           {% if page.sidebar_fifth %}
-            <div{{ sidebar_first_attributes }}>
+            <div class="sidebar_fifth sidebar col-12 col-md-3 col-lg-2 order-first" id="sidebar_fifth">
               <aside class="section" role="complementary">
                 {{ page.sidebar_fifth }}
               </aside>
             </div>
           {% endif %}
-          {% if page.sidebar_sixth %}
-            <div{{ sidebar_second_attributes }}>
-              <aside class="section" role="complementary">
-                {{ page.sidebar_sixth }}
-              </aside>
-            </div>
-          {% endif %}
+          <div class="sidebars_right_side col-md-3">
+            {% if page.sidebar_sixth %}
+              <div class="sidebar_sixth sidebar" id="sidebar_sixth">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_sixth }}
+                </aside>
+              </div>
+            {% endif %}
+            {% if page.advertisement_1 %}
+              <div class="advertisement_1 sidebar" id="sidebar_sixth">
+                  {{ page.advertisement_1 }}
+              </div>
+            {% endif %}
+            {% if page.sidebar_seventh %}
+              <div class="sidebar_seventh sidebar" id="sidebar_seventh">
+                <aside class="section" role="complementary">
+                  {{ page.sidebar_seventh }}
+                </aside>
+              </div>
+            {% endif %}
+          </div>
         </div>
       </div>
       {# end custom-2 #}

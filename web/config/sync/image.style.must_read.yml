@@ -3,20 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: must_read
-label: 'must read'
+label: 'must read (562×478)'
 effects:
-  8f207c2d-9598-4cf3-aa34-ec17c6d6cf4e:
-    uuid: 8f207c2d-9598-4cf3-aa34-ec17c6d6cf4e
-    id: image_resize
+  3d3e14c4-23c0-4932-8302-0d7c09e3dd6f:
+    uuid: 3d3e14c4-23c0-4932-8302-0d7c09e3dd6f
+    id: image_crop
     weight: 1
     data:
       width: 562
       height: 478
-  52cb3329-7d87-4656-99df-4f8d9ec5fa3c:
-    uuid: 52cb3329-7d87-4656-99df-4f8d9ec5fa3c
-    id: image_scale
-    weight: 2
-    data:
-      width: 562
-      height: 478
-      upscale: false
+      anchor: center-center
