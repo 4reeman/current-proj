@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function pulses_audio_widget_theme($existing, $type, $theme, $path) {
+  return [
+    'pulses_audio' => [
+      'variables' => [
+        'src' => NULL,
+      ],
+    ],
+  ];
+}

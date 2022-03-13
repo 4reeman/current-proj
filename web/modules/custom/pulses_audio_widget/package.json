@@ -1,0 +1,36 @@
+{
+  "name": "fifth_sub_bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap 4 - Barrio SASS Starter Kit",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "graceful-fs": "^4.2.9",
+    "mini-css-extract-plugin": "^2.5.3",
+    "node-sass": "^7.0.1",
+    "npm": "^8.5.0",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.3.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.1.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "build:dev": "webpack --config webpack.config.js --mode development",
+    "start": "webpack --watch",
+    "start:dev": "webpack --watch --mode development"
+  },
+  "author": "",
+  "license": "ISC"
+}
