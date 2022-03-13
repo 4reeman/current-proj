@@ -41,6 +41,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pulses_audio_widget: 0
   rdf: 0
   search: 0
   serialization: 0
@@ -51,6 +52,7 @@ module:
   taxonomy: 0
   text: 0
   token: 0
+  token_filter: 0
   toolbar: 0
   tour: 0
   update: 0
