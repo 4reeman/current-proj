@@ -5326,16 +5326,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.37",
+            "version": "v4.4.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "c59f37705c3e513ae55b2735f128f4ce363c82ec"
+                "reference": "72a5b35fecaa670b13954e6eaf414acbe2a67b35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/c59f37705c3e513ae55b2735f128f4ce363c82ec",
-                "reference": "c59f37705c3e513ae55b2735f128f4ce363c82ec",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/72a5b35fecaa670b13954e6eaf414acbe2a67b35",
+                "reference": "72a5b35fecaa670b13954e6eaf414acbe2a67b35",
                 "shasum": ""
             },
             "require": {
@@ -5369,7 +5369,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v4.4.37"
+                "source": "https://github.com/symfony/filesystem/tree/v4.4.39"
             },
             "funding": [
                 {
@@ -5385,7 +5385,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:41:36+00:00"
+            "time": "2022-02-25T10:38:15+00:00"
         },
         {
             "name": "symfony/finder",
@@ -6195,7 +6195,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -6251,7 +6251,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -6271,7 +6271,7 @@
         },
         {
             "name": "symfony/polyfill-php73",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php73.git",
@@ -6330,7 +6330,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php73/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.25.0"
             },
             "funding": [
                 {
