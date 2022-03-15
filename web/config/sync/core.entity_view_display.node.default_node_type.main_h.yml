@@ -1,0 +1,61 @@
+uuid: 2dcb6eea-25e7-41b7-91e1-89e08823b64a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.main_h
+    - field.field.node.default_node_type.body
+    - field.field.node.default_node_type.field_audio_field
+    - field.field.node.default_node_type.field_comment_f_node
+    - field.field.node.default_node_type.field_editor_picks
+    - field.field.node.default_node_type.field_img_under_body
+    - field.field.node.default_node_type.field_main_node_img
+    - field.field.node.default_node_type.field_share_
+    - field.field.node.default_node_type.field_share_post_bottom
+    - field.field.node.default_node_type.field_sub_article_image
+    - field.field.node.default_node_type.field_taags
+    - field.field.node.default_node_type.field_taxonom
+    - field.field.node.default_node_type.field_title_for_article
+    - field.field.node.default_node_type.field_total
+    - field.field.node.default_node_type.field_total_title
+    - image.style.tesers_297x178_
+    - node.type.default_node_type
+  module:
+    - media
+    - user
+id: node.default_node_type.main_h
+targetEntityType: node
+bundle: default_node_type
+mode: main_h
+content:
+  field_main_node_img:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: tesers_297x178_
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_taxonom:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_audio_field: true
+  field_comment_f_node: true
+  field_editor_picks: true
+  field_img_under_body: true
+  field_share_: true
+  field_share_post_bottom: true
+  field_sub_article_image: true
+  field_taags: true
+  field_title_for_article: true
+  field_total: true
+  field_total_title: true
+  links: true
