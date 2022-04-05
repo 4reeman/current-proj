@@ -1,9 +1,0 @@
-name: Pulses Audio Widget
-description: Create widget for audio field of a media module
-package: Custom
-type: module
-core: 8.x
-core_version_requirement: ^8 || ^9
-version: 1.0.0
-dependencies:
-  - field
