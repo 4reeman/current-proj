@@ -1,0 +1,16 @@
+uuid: 99eee140-d934-459a-9051-cce9da77f153
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.main_page
+id: main_navigation_menu
+label: 'Main Navigation Menu'
+vocabulary: main_page
+menu: main
+expanded: true
+depth: 1
+menu_parent: 'admin:'
+description_field_name: path
+use_term_weight_order: true

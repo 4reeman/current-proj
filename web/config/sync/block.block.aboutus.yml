@@ -1,0 +1,25 @@
+uuid: 92a4defe-c059-4473-9ef9-03a8b33678a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-us
+  module:
+    - system
+  theme:
+    - fifth_sub_bootstrap
+id: aboutus
+theme: fifth_sub_bootstrap
+region: top_header
+weight: -21
+provider: null
+plugin: 'system_menu_block:about-us'
+settings:
+  id: 'system_menu_block:about-us'
+  label: 'About us'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
