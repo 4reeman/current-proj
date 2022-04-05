@@ -1,0 +1,24 @@
+uuid: 9c1afaff-d78a-458a-a8db-c9742f5d5e9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copyrighting_footer
+    - field.storage.block_content.field_site_name
+  module:
+    - text
+id: block_content.copyrighting_footer.field_site_name
+field_name: field_site_name
+entity_type: block_content
+bundle: copyrighting_footer
+label: 'site name'
+description: 'use token replace ( site:name )  & Full HTML text format'
+required: false
+translatable: false
+default_value:
+  -
+    value: '[site:name]'
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,6 +1,8 @@
-.block-views-blockeditor-picks-block-1,
-.block-views-blockeditor-picks-block-4 {
-  @include float_picture_text(true);
+.layout-main-wrapper {
+  .block-views-blockeditor-picks-block-1,
+  .block-views-blockeditor-picks-block-4 {
+    @include float_picture_text(true);
+  }
 }
 .block-views-blockadvertisement-block-1 {
   .views-row {

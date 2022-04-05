@@ -229,16 +229,18 @@
       </div>
       {# end custom-2 #}
     </div>
-    <footer class="site-footer">
-      {% block footer %}
-        <div class="{{ container }}">
-          {% if page.footer_fifth %}
-            <div class="site-footer__bottom">
-              {{ page.footer_fifth }}
-            </div>
-          {% endif %}
-        </div>
-      {% endblock %}
+    <footer class="footer">
+      <div class="footer-wrapper">
+        {% block footer %}
+          <div class="{{ container }}">
+            {% if page.footer_fifth %}
+              <div class="site-footer__bottom">
+                {{ page.footer_fifth }}
+              </div>
+            {% endif %}
+          </div>
+        {% endblock %}
+      </div>
     </footer>
   </div>
 </div>

@@ -1,0 +1,51 @@
+.footer {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url("https://demo.tagdiv.com/newspaper_pulses_pro/wp-content/uploads/2019/12/47-1.jpg");
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  a,
+  p {
+    color: $footer_text_color;
+  }
+  h2 {
+    color: yellow;
+  }
+  .social-link-field {
+    display: flex;
+    margin-top: 1rem;
+    &>li:not(:first-child) {
+      padding-left: 1rem;
+    }
+  }
+}
+.footer-wrapper {
+  background: black;
+  padding: 4rem 0 2rem 0;
+  opacity: 0.85;
+  .block-views-blockeditor-picks-block-1 {
+    @include float_picture_text();
+    flex-grow: 1;
+  }
+  .block-block-contenta4195bea-b149-4701-bc8e-70b6075ab15d {
+    flex-grow: 6;
+  }
+  .block-views-blockabout-us-block-1 {
+    flex-grow: 2;
+  }
+  .block-views-blockabout-us-block-2 {
+    flex-grow: 1;
+  }
+}
+.region-footer-fifth {
+  display: flex;
+  justify-content: space-between;
+}

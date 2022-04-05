@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.copyrighting_footer
     - field.field.block_content.copyrighting_footer.body
+    - field.field.block_content.copyrighting_footer.field_site_name
     - field.field.block_content.copyrighting_footer.field_social_link
   module:
     - social_link_field
@@ -19,6 +20,13 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_site_name:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
   field_social_link:
@@ -29,6 +37,6 @@ content:
       orientation: vertical
       new_tab: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden: {  }
