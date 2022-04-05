@@ -17,6 +17,7 @@ use Drupal\Core\Field\FieldItemListInterface;
  * )
  */
 class FilePulsesAudioFormatter extends FilePulsesAudioFormatterBase {
+
   /**
    * {@inheritdoc}
    */
