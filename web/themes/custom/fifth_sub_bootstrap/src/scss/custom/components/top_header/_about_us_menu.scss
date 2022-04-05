@@ -1,0 +1,5 @@
+.menu--about-us {
+  .nav-link {
+    @include def_link($main-white, $main-purple);
+  }
+}

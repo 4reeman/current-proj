@@ -1,0 +1,14 @@
+.menu--main {
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  .nav-link {
+    @include def_link($main-black, $main-purple);
+  }
+  .navbar-nav {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .is-active {
+    color: $main-purple;
+  }
+}

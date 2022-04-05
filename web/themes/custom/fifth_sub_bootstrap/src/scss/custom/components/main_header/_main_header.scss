@@ -14,3 +14,82 @@ aside {
   top: 0;
   left: 0;
 }
+.region-header-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbar-form {
+  width: 100%;
+}
+.view-id-main_header.view-display-id-block_1 {
+  margin: 0 auto;
+  top: 2.5rem;
+  max-width: 95rem;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: $sub-menu-bckg;
+}
+.view-id-main_header {
+  display: flex;
+  position: relative;
+  border: 1px solid $border-color;
+  min-height: 23rem;
+  .view-filters {
+    border-right: 1px solid $border-color;
+    width: 15%;
+    padding: 2rem 0;
+    button {
+      display: none;
+    }
+    label {
+      padding: 0 2rem;
+    }
+  }
+  .view-content {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    flex-grow: 1;
+  }
+  .view-pager-group {
+    width: 85%;
+    padding: 2rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    nav {
+      margin-top: 1rem;
+    }
+  }
+  .fieldset-wrapper {
+    .js-form-type-radio {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      width: 100%;
+      padding: 0;
+    }
+    .form-check-input {
+      position: absolute;
+      width: 100%;
+      background: transparent;
+      border: unset;
+      border-radius: unset;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .views-field-title {
+    max-width: 297px;
+  }
+  .views-row {
+    max-width: 297px;
+    padding: 0;
+  }
+}
+
+
