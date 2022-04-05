@@ -3,9 +3,6 @@
 namespace Drupal\pulses_audio_widget\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\file\Entity\File;
-use Drupal\pulses_audio_widget\Plugin\Field\FieldFormatter\FilePulsesAudioFormatterBase;
-use Drupal\Core\StreamWrapper\PublicStream;
 
 /**
  * Plugin implementation of the 'file_audio' formatter.
@@ -20,13 +17,13 @@ use Drupal\Core\StreamWrapper\PublicStream;
  * )
  */
 class FilePulsesAudioFormatter extends FilePulsesAudioFormatterBase {
-
   /**
    * {@inheritdoc}
    */
   public static function getMediaType() {
     return 'audio';
   }
+
   /**
    * Builds a renderable array for a field value.
    *
@@ -58,4 +55,5 @@ class FilePulsesAudioFormatter extends FilePulsesAudioFormatterBase {
 
     return $elements;
   }
+
 }

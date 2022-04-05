@@ -43,13 +43,14 @@ abstract class FilePulsesAudioFormatterBase extends FileFormatterBase implements
   /**
    * {@inheritdoc}
    */
+  // Todo check access if the current file access control handler explicitly
   public static function defaultSettings() {
     return [
         'controls' => TRUE,
         'autoplay' => FALSE,
         'loop' => FALSE,
         'multiple_file_display_type' => 'tags',
-      ] + parent::defaultSettings();
+      ];
   }
 
   /**
