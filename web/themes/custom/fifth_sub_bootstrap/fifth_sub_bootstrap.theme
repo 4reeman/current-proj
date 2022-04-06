@@ -9,5 +9,41 @@
  * Implements hook_preprocess_HOOK().
  */
 function fifth_sub_bootstrap_preprocess_page(&$variables) {
-  $variables['navbar_collapse_class'] = 'offcanvas offcanvas-start';
+  if (theme_get_setting('bootstrap_barrio_navbar_top_class') !== NULL) {
+    $variables['navbar_top_attributes']['class'][] = theme_get_setting('bootstrap_barrio_navbar_top_class');
+  }
+  $slide_side = theme_get_setting('bootstrap_barrio_navbar_slide');
+  switch ($slide_side) {
+    case 1:
+      $variables['navbar_collapse_class'] = 'offcanvas offcanvas-start';
+      break;
+
+    default:
+      $variables['navbar_collapse_class'] = 'offcanvas offcanvas-end';
+  }
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function fifth_sub_bootstrap_preprocess_menu(&$variables) {
+  $menuName = $variables['menu_name'];
+  $menuItems = $variables['items'];
+  // @todo pass filter arguments for view with main_header id.
+  switch ($menuName) {
+    case 'main':
+      foreach ($menuItems as $key => $value) {
+        if ($value['is_expanded'] === TRUE) {
+          $variables['items'][$key]['fullscreen']['view'][] = [
+            '#type' => 'view',
+            '#name' => 'main_header',
+            '#display_id' => 'block_1',
+          ];
+        }
+      }
+      break;
+
+    default:
+      break;
+  }
 }

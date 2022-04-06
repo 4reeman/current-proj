@@ -1,0 +1,61 @@
+.ajax {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  top: 0;
+  bottom: 0;
+}
+.ajax-item {
+  width: 30px;
+  height: 30px;
+  background: purple;
+  animation: loader 0.45s linear infinite;
+}
+.ajax-item:nth-child(5) {
+  visibility: hidden;
+}
+.item-1 {
+  animation-delay: 0.05s;
+}
+.item-2 {
+  animation-delay: 0.1s;
+}
+.item-3 {
+  animation-delay: 0.15s;
+}
+.item-4 {
+  animation-delay: 0.4s;
+}
+.item-5 {
+  visibility: hidden;
+}
+.item-6 {
+  animation-delay: 0.2s;
+}
+.item-7 {
+  animation-delay: 0.35s;
+}
+.item-8 {
+  animation-delay: 0.3s;
+}
+.item-9 {
+  animation-delay: 0.25s;
+}
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

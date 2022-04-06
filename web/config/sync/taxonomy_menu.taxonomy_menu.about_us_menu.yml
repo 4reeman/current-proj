@@ -1,0 +1,16 @@
+uuid: eee77703-85d2-43e8-ae40-7b1911231512
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-us
+    - taxonomy.vocabulary.about_us
+id: about_us_menu
+label: 'About Us Menu'
+vocabulary: about_us
+menu: about-us
+expanded: false
+depth: 0
+menu_parent: 'about-us:'
+description_field_name: null
+use_term_weight_order: true

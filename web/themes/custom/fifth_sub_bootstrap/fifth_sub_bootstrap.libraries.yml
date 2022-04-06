@@ -1,13 +1,14 @@
 global-styling:
   version: VERSION
   js:
-    dist/scripts.bundle.js: {}
+    dist/js/vendorScript/vendorScript.bundle.js: {}
+    dist/js/parentThemeScript/parentThemeScript.bundle.js: {}
+    dist/js/themeScript/themeScript.bundle.js: {}
   css:
     base:
-      dist/styles.css: { minified: true }
-    theme:
-      dist/reset.css: {}
+      dist/css/vendorStyle/vendorStyle.css: { minified: true }
+      dist/css/themeStyle/themeStyle.css: { minified: true }
   dependencies:
     - core/jquery
-    - core/jquery.once
-    - core/popperjs
+    - core/once
+    - core/drupal

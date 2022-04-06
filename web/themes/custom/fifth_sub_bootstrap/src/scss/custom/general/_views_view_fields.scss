@@ -1,4 +1,6 @@
-.views-field-name {
+// Todo rework fields with taxonomy term above img (image wrapper need to overflow taxonomy wrapper if it go beyond)
+.views-field-name,
+.field--name-field-taxonom {
   @include rfs(-1.6rem, margin-top);
   line-height: 2;
   span {
@@ -57,5 +59,20 @@
 .views-field-field-pic {
   img {
     width: 100%;
+  }
+}
+.taxonomy-group {
+  position: relative;
+  .views-field-field-taxonom {
+    position: absolute;
+    bottom: 0;
+    line-height: normal;
+    font-size: 1rem;
+    padding: 0 0.3rem;
+    letter-spacing: 0.05rem;
+    background: $main-purple;
+  }
+  a {
+    color: $main-white;
   }
 }

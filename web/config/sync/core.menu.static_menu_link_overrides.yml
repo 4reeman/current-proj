@@ -8,8 +8,140 @@ definitions:
     expanded: false
     enabled: true
   standard__front_page:
-    weight: -50
     menu_name: main
     parent: ''
+    weight: -50
     expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__10':
+    expanded: false
+    parent: 'admin:'
+    weight: 0
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__5':
+    expanded: false
+    parent: 'admin:'
+    weight: 1
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__2':
+    expanded: false
+    parent: 'admin:'
+    weight: 2
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__6':
+    expanded: false
+    parent: 'admin:'
+    weight: 3
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__3':
+    expanded: false
+    parent: 'admin:'
+    weight: 4
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__1':
+    expanded: false
+    parent: 'admin:'
+    weight: 5
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__7':
+    expanded: false
+    parent: 'admin:'
+    weight: 6
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__4':
+    expanded: false
+    parent: 'admin:'
+    weight: 7
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__8':
+    expanded: false
+    parent: 'admin:'
+    weight: 8
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__123__9':
+    expanded: false
+    parent: 'admin:'
+    weight: 9
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__5':
+    weight: -45
+    menu_name: main
+    parent: ''
+    enabled: true
+    expanded: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__2':
+    weight: -48
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__6':
+    weight: -44
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__3':
+    weight: -47
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__1':
+    weight: -49
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__7':
+    weight: -43
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__4':
+    weight: -46
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__8':
+    weight: -42
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__9':
+    weight: -41
+    menu_name: main
+    parent: ''
+    expanded: true
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__21':
+    expanded: true
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.main_navigation_menu.1'
+    weight: 1
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__23':
+    expanded: true
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.main_navigation_menu.1'
+    weight: 3
+    menu_name: main
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__main_navigation_menu__24':
+    expanded: true
+    parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.main_navigation_menu.1'
+    weight: 4
+    menu_name: main
     enabled: true
