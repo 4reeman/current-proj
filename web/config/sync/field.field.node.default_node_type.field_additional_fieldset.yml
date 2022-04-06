@@ -1,0 +1,31 @@
+uuid: 9297fd53-901d-45ee-a20a-254ee9df6d17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_fieldset
+    - node.type.default_node_type
+    - paragraphs.paragraphs_type.additional_fieldset
+  module:
+    - entity_reference_revisions
+id: node.default_node_type.field_additional_fieldset
+field_name: field_additional_fieldset
+entity_type: node
+bundle: default_node_type
+label: 'Additional Fieldset'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      additional_fieldset: additional_fieldset
+    negate: 0
+    target_bundles_drag_drop:
+      additional_fieldset:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

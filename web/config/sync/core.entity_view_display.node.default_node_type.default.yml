@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment.default
     - field.field.node.default_node_type.body
+    - field.field.node.default_node_type.field_additional_fieldset
     - field.field.node.default_node_type.field_audio_field
     - field.field.node.default_node_type.field_comment_f_node
     - field.field.node.default_node_type.field_editor_picks
@@ -21,6 +22,7 @@ dependencies:
     - node.type.default_node_type
   module:
     - comment
+    - paragraphs
     - social_media
     - text
     - user
@@ -35,6 +37,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_additional_fieldset:
+    type: paragraph_summary
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
     region: content
   field_audio_field:
     type: entity_reference_label
