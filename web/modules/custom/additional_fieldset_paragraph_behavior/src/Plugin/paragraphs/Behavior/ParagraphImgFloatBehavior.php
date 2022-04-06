@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\pulses\Behavior\ParagraphImgFloatBehavior;
+namespace Drupal\additional_fieldset_paragraph_behavior\Plugin\paragraphs\Behavior;
 
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -12,13 +12,14 @@ use Drupal\paragraphs\ParagraphsBehaviorBase;
 
 /**
  * @ParagraphsBehavior(
- *   id = "pulses_paragraph_img_float",
+ *   id = "paragraph_img_float_behavior",
  *   label = @Translation("Paragraph img float side"),
  *   description = @Translation("Allow to select side for display image"),
  *   weight = 0,
  * )
 */
-class AdditionalFieldsetParagraphBehavior extends ParagraphsBehaviorBase {
+class ParagraphImgFloatBehavior extends ParagraphsBehaviorBase {
+
 
   /**
    * {@inheritdoc}
@@ -30,19 +31,22 @@ class AdditionalFieldsetParagraphBehavior extends ParagraphsBehaviorBase {
   /**
    * {@inheritdoc}
    */
-  public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
-
-  }
+  public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) { }
 
   /**
    * {@inheritdoc}
    */
   public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state) {
-    $form['image_size'] = [
-      '#type' => 'checkbox',
-      '#title' => $this->t('Syka Ny Davai'),
-      '#default_value' => TRUE,
-    ];
+    if ($paragraph->hasField('field_title')) {
+      $form['title_element'] = [
+        '#type' => 'select',
+        '#title' => $this->t('Title element'),
+        '#description' => $this->t('Wrapper HTML element'),
+        '#options' => $this->getTitleOptions(),
+        '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'title_element', 'h2'),
+      ];
+    }
+
     return $form;
   }
 
@@ -51,28 +55,20 @@ class AdditionalFieldsetParagraphBehavior extends ParagraphsBehaviorBase {
    */
   public function settingsSummary(Paragraph $paragraph) {
     $title_element = $paragraph->getBehaviorSetting($this->getPluginId(), 'title_element');
-    return [$title_element ? $this->t('Title element: @element', ['@element' => $title_element]) : 'adsfasdf'];
+    return [$title_element ? $this->t('Title element: @element', ['@element' => $title_element]) : ''];
   }
 
   /**
-   * Return options for image size.
+   * Return options for heading elements.
    */
-  private function getImageSizeOptions() {
+  private function getTitleOptions() {
     return [
-      '4_12' => $this->t('4 of 12'),
-      '6_12' => $this->t('6 of 12'),
-      '8_12' => $this->t('8 of 12'),
+      'h2' => '<h2>',
+      'h3' => '<h3>',
+      'h4' => '<h4>',
+      'div' => '<div>',
     ];
   }
 
-  /**
-   * Return options for image position.
-   */
-  private function getImagePositionOptions() {
-    return [
-      'left' => $this->t('Left'),
-      'right' => $this->t('Right'),
-    ];
-  }
 
 }

@@ -1,0 +1,10 @@
+<?php
+
+
+
+/**
+ * Implements hook_module().
+ */
+function additional_fieldset_paragraph_behavior_module() {
+  $b =4;
+}
