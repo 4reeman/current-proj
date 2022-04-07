@@ -20,53 +20,57 @@ use Drupal\paragraphs\ParagraphsBehaviorBase;
 */
 class ParagraphImgFloatBehavior extends ParagraphsBehaviorBase {
 
-
   /**
    * {@inheritdoc}
    */
   public static function isApplicable(ParagraphsType $paragraphs_type) {
-    return TRUE;
+    if($paragraphs_type->id == 'additional_fieldset') {
+      return TRUE;
+    }
   }
 
   /**
    * {@inheritdoc}
    */
-  public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) { }
+  public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
+    $img_side = $paragraph->getBehaviorSetting($this->getPluginId(), 'css_class_options', []);
+    $build['#attributes']['class'][] = 'image-side' . str_replace('_', '-', $img_side);
+  }
 
   /**
    * {@inheritdoc}
    */
   public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state) {
-    if ($paragraph->hasField('field_title')) {
-      $form['title_element'] = [
+      $form['img_side'] = [
         '#type' => 'select',
-        '#title' => $this->t('Title element'),
-        '#description' => $this->t('Wrapper HTML element'),
-        '#options' => $this->getTitleOptions(),
-        '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'title_element', 'h2'),
+        '#title' => $this->t('Image Side Display'),
+        '#description' => $this->t('Side of image side'),
+        '#options' => $this->getImageSide(),
+        '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'css_class_options', []),
       ];
-    }
 
     return $form;
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function settingsSummary(Paragraph $paragraph) {
-    $title_element = $paragraph->getBehaviorSetting($this->getPluginId(), 'title_element');
-    return [$title_element ? $this->t('Title element: @element', ['@element' => $title_element]) : ''];
-  }
+//  /**
+//   * {@inheritdoc}
+//   */
+//  public function settingsSummary(Paragraph $paragraph) {
+//    $image_size = $paragraph->getBehaviorSetting($this->getPluginId(), 'css_class_options', 'left');
+//    $image_size_options = $this->getImageSide();
+//
+//    $summary = [];
+//    $summary[] = $this->t('Image side: @value', ['@value' => $image_size_options[$image_size]]);
+//    return $summary;
+//  }
 
   /**
-   * Return options for heading elements.
+   * Return options for defining image side.
    */
-  private function getTitleOptions() {
+  private function getImageSide() {
     return [
-      'h2' => '<h2>',
-      'h3' => '<h3>',
-      'h4' => '<h4>',
-      'div' => '<div>',
+      'left' => $this->t('left'),
+      'right' => $this->t('right'),
     ];
   }
 
