@@ -6,10 +6,8 @@ dependencies:
     - core.entity_view_mode.paragraph.preview
     - field.field.paragraph.additional_fieldset.field_additional_
     - field.field.paragraph.additional_fieldset.field_additional_img
-    - image.style.media_library
     - paragraphs.paragraphs_type.additional_fieldset
   module:
-    - media
     - text
 id: paragraph.additional_fieldset.preview
 targetEntityType: paragraph
@@ -24,11 +22,11 @@ content:
     weight: 1
     region: content
   field_additional_img:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: above
     settings:
-      image_link: ''
-      image_style: media_library
+      view_mode: media_library
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content

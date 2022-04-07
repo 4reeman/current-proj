@@ -22,7 +22,7 @@ dependencies:
     - node.type.default_node_type
   module:
     - comment
-    - paragraphs
+    - entity_reference_revisions
     - social_media
     - text
     - user
@@ -39,9 +39,11 @@ content:
     weight: 7
     region: content
   field_additional_fieldset:
-    type: paragraph_summary
+    type: entity_reference_revisions_entity_view
     label: above
-    settings: {  }
+    settings:
+      view_mode: preview
+      link: ''
     third_party_settings: {  }
     weight: 13
     region: content
