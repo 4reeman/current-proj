@@ -4,7 +4,6 @@ namespace Drupal\additional_fieldset_paragraph_behavior\Plugin\paragraphs\Behavi
 
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\paragraphs\Annotation\ParagraphsBehavior;
 use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\paragraphs\Entity\ParagraphsType;
 use Drupal\paragraphs\ParagraphInterface;
@@ -17,52 +16,51 @@ use Drupal\paragraphs\ParagraphsBehaviorBase;
  *   description = @Translation("Allow to select side for display image"),
  *   weight = 0,
  * )
-*/
-class ParagraphImgFloatBehavior extends ParagraphsBehaviorBase {
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function isApplicable(ParagraphsType $paragraphs_type) {
-    if($paragraphs_type->id == 'additional_fieldset') {
-      return TRUE;
-    }
-  }
+ */
+final class ParagraphImgFloatBehavior extends ParagraphsBehaviorBase {
 
   /**
    * {@inheritdoc}
    */
   public function view(array &$build, Paragraph $paragraph, EntityViewDisplayInterface $display, $view_mode) {
-    $img_side = $paragraph->getBehaviorSetting($this->getPluginId(), 'css_class_options', []);
-    $build['#attributes']['class'][] = 'image-side' . str_replace('_', '-', $img_side);
+    $img_side = $paragraph->getBehaviorSetting($this->getPluginId(), 'img_sides', 'left');
+    $build['#attributes']['class'][] = 'image-side-' . $img_side;
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildBehaviorForm(ParagraphInterface $paragraph, array &$form, FormStateInterface $form_state) {
-      $form['img_side'] = [
-        '#type' => 'select',
-        '#title' => $this->t('Image Side Display'),
-        '#description' => $this->t('Side of image side'),
-        '#options' => $this->getImageSide(),
-        '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'css_class_options', []),
-      ];
+    $form['img_sides'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Image Side Display'),
+      '#description' => $this->t('Side of image side'),
+      '#options' => $this->getImageSide(),
+      '#default_value' => $paragraph->getBehaviorSetting($this->getPluginId(), 'img_sides', 'left'),
+    ];
 
     return $form;
   }
 
-//  /**
-//   * {@inheritdoc}
-//   */
-//  public function settingsSummary(Paragraph $paragraph) {
-//    $image_size = $paragraph->getBehaviorSetting($this->getPluginId(), 'css_class_options', 'left');
-//    $image_size_options = $this->getImageSide();
-//
-//    $summary = [];
-//    $summary[] = $this->t('Image side: @value', ['@value' => $image_size_options[$image_size]]);
-//    return $summary;
-//  }
+  /**
+   * {@inheritdoc}
+   */
+  public function settingsSummary(Paragraph $paragraph) {
+    $image_side = $paragraph->getBehaviorSetting($this->getPluginId(), 'css', 'left');
+    $image_side_options = $this->getImageSide();
+
+    $summary = [];
+    $summary[] = $this->t('Image side: @value', ['@value' => $image_side_options[$image_side]]);
+
+    return $summary;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function isApplicable(ParagraphsType $paragraphs_type) {
+    return $paragraphs_type->id() === 'additional_fieldset';
+  }
 
   /**
    * Return options for defining image side.
@@ -73,6 +71,5 @@ class ParagraphImgFloatBehavior extends ParagraphsBehaviorBase {
       'right' => $this->t('right'),
     ];
   }
-
 
 }

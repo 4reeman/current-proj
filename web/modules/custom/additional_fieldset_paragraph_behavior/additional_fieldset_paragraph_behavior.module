@@ -1,5 +1,0 @@
-<?php
-
-function preprocess(&$variables) {
-  $a = 0;
-}
