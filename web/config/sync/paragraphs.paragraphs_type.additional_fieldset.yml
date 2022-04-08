@@ -1,0 +1,14 @@
+uuid: 24a18a44-f12f-4658-b9f8-d8a6b0cc1f62
+langcode: en
+status: true
+dependencies:
+  module:
+    - additional_fieldset_paragraph_behavior
+id: additional_fieldset
+label: 'Additional fieldset'
+icon_uuid: null
+icon_default: null
+description: 'text + img'
+behavior_plugins:
+  paragraph_img_float_behavior:
+    enabled: true

@@ -1,0 +1,29 @@
+uuid: eba86a63-685d-476e-a555-816c75f323d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_additional_img
+    - media.type.image
+    - paragraphs.paragraphs_type.additional_fieldset
+id: paragraph.additional_fieldset.field_additional_img
+field_name: field_additional_img
+entity_type: paragraph
+bundle: additional_fieldset
+label: 'additional img'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

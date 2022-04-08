@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.default_node_type.body
+    - field.field.node.default_node_type.field_additional_fieldset
     - field.field.node.default_node_type.field_audio_field
     - field.field.node.default_node_type.field_comment_f_node
     - field.field.node.default_node_type.field_editor_picks
@@ -49,6 +50,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_additional_fieldset: true
   field_audio_field: true
   field_comment_f_node: true
   field_editor_picks: true
