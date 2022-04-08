@@ -53,3 +53,15 @@
     }
   }
 }
+
+@mixin image-side-additional-fieldset ($side, $order-first, $order-second) {
+  .image-side-#{$side} {
+    display: flex;
+    .field--name-field-additional-img {
+      order: $order-first;
+    }
+    .field--name-field-additional- {
+      order: $order-second;
+    }
+  }
+}
