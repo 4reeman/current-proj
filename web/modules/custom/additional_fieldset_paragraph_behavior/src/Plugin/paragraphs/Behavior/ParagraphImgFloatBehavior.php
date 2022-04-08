@@ -10,6 +10,8 @@ use Drupal\paragraphs\ParagraphInterface;
 use Drupal\paragraphs\ParagraphsBehaviorBase;
 
 /**
+ * Behavior allows you to determine the side of the image relative to the text.
+ *
  * @ParagraphsBehavior(
  *   id = "paragraph_img_float_behavior",
  *   label = @Translation("Paragraph img float side"),
