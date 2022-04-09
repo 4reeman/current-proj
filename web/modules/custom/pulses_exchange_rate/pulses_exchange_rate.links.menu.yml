@@ -1,0 +1,6 @@
+exchange.admin:
+  title: 'Exchange Api Key'
+  description: 'Manage Api key'
+  parent: system.admin_structure
+  route_name: pulses_exchange_rate.settings
+  weight: -1

@@ -1,0 +1,6 @@
+pulses_exchange_rate.settings:
+  path: '/pulses_exchange_rate/settings'
+  defaults:
+    _form: 'Drupal\pulses_exchange_rate\Form\ExchangeApiKey'
+  requirements:
+    _permission: 'access content'

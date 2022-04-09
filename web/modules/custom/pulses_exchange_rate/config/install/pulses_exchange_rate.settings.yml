@@ -1,0 +1,3 @@
+pulses_exchange_rate.key:
+  type: string
+  label: 'Api Key'
