@@ -1,0 +1,34 @@
+uuid: 3d60d798-e367-4f60-97d5-896d67c1cb1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_fieldset.field_additional_img
+    - field.field.paragraph.additional_fieldset.field_additional_text
+    - image.style.advertisement_330x25
+    - paragraphs.paragraphs_type.additional_fieldset
+  module:
+    - media
+    - text
+id: paragraph.additional_fieldset.default
+targetEntityType: paragraph
+bundle: additional_fieldset
+mode: default
+content:
+  field_additional_img:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: advertisement_330x25
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_additional_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

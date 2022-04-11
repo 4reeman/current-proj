@@ -1,0 +1,36 @@
+uuid: 2f3d5b0f-3dfc-48e2-af33-8682bb7a2064
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_fieldset.field_additional_img
+    - field.field.paragraph.additional_fieldset.field_additional_text
+    - paragraphs.paragraphs_type.additional_fieldset
+  module:
+    - media_library
+    - text
+id: paragraph.additional_fieldset.default
+targetEntityType: paragraph
+bundle: additional_fieldset
+mode: default
+content:
+  field_additional_img:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_additional_text:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
