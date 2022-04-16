@@ -1,1 +1,14 @@
 <?php
+
+/**
+ * Implements hook_theme().
+ */
+function pulses_exchange_rate_theme($existing, $type, $theme, $path) {
+  return [
+    'bla' => [
+      'variables' => [
+        'currency' => [],
+      ],
+    ],
+  ];
+}

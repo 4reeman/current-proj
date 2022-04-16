@@ -1,0 +1,6 @@
+{% for code, price in currency %}
+  {{ code }}: {{ price }};
+{% endfor %}
+{% if currency is empty %}
+  <p>Oops, it will display soon</p>
+{% endif %}
