@@ -1,0 +1,6 @@
+pulses_weather.settings:
+  path: '/pulses_weather/settings'
+  defaults:
+    _form: 'Drupal\pulses_weather\Form\WeatherSettingsForm'
+  requirements:
+    _permission: 'access content'

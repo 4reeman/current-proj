@@ -1,0 +1,4 @@
+services:
+  pulses_weather_service:
+    class: Drupal\pulses_exchange_rate\CurrencyDataProvider
+    arguments: ['@http_client', '@config.factory']

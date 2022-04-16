@@ -1,0 +1,13 @@
+weather.admin:
+  title: 'Forms'
+  description: 'Manage Api key'
+  parent: system.admin_structure
+  weight: -2
+  route_name: system.admin_structure
+weather.api:
+  title: 'Weather Api Key'
+  description: 'Manage Api key'
+  parent: weather.admin
+  menu_name: block
+  route_name: pulses_weather.settings
+  weight: 0
