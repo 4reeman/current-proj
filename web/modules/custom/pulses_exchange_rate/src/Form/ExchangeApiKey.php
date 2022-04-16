@@ -4,6 +4,7 @@ namespace Drupal\pulses_exchange_rate\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Form for entering Api key.
@@ -11,7 +12,23 @@ use Drupal\Core\Form\FormStateInterface;
 class ExchangeApiKey extends ConfigFormBase {
 
   /**
-   * Config settings.
+   * Instance of CurrencyDataProvider.
+   *
+   * @var null
+   */
+  public $render;
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    $services = parent::create($container);
+    $services->render = $container->get('pulses_exchange_rate_service');
+    return $services;
+  }
+
+  /**
+   * Custom config name.
    *
    * @var string
    */
@@ -21,7 +38,7 @@ class ExchangeApiKey extends ConfigFormBase {
    * {@inheritDoc}
    */
   public function getFormId() {
-    return 'pulses_exchange_rate';
+    return 'pulses_exchange_rates';
   }
 
   /**
@@ -34,31 +51,111 @@ class ExchangeApiKey extends ConfigFormBase {
   }
 
   /**
-   * Build parent Form with new form field api_key.
+   * Form for select name of currency.
+   *
+   * Currency Data Provider provide possibility to check and get data from api
+   * for form select elements in 'currency' fieldset wrapper.
    *
    * {@inheritDoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('pulses_exchange_rate.settings');
+    $config = $this->config(static::SETTINGS);
+    $api_key = $form_state->getValue('api_key');
+    $valid_key = preg_match('/^.{40}$/', $api_key);
+    $valid_response = FALSE;
+    if (!$valid_key) {
+      $api_key = $config->get('key');
+    }
+    else {
+      $valid_response = $this->render->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, FALSE);
+    }
     $form['api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Please, enter your Api key:'),
-      '#default_value' => $config->get('api_key'),
+      '#default_value' => $config->get('key'),
+      '#ajax' => [
+        'callback' => '::validateApiKey',
+        'disable-refocus' => TRUE,
+        'keypress' => TRUE,
+        'event' => 'blur',
+        'wrapper' => 'pulses-exchange-rates',
+        'progress' => FALSE,
+      ],
     ];
-
+    if (!empty($api_key) && $valid_response) {
+      $form['currency'] = [
+        '#type' => 'fieldset',
+      ];
+      $form['currency']['first'] = [
+        '#type' => 'select',
+        '#title' => $this->t('Select needed currency:'),
+        '#options' => $this->render->data,
+        '#default_value' => $config->get('currency.first'),
+      ];
+      $form['currency']['second'] = [
+        '#type' => 'select',
+        '#title' => $this->t('Select needed currency:'),
+        '#options' => $this->render->data,
+        '#default_value' => $config->get('currency.second'),
+      ];
+      $form['currency']['third'] = [
+        '#type' => 'select',
+        '#title' => $this->t('Select needed currency:'),
+        '#options' => $this->render->data,
+        '#default_value' => $config->get('currency.third'),
+      ];
+    }
     return parent::buildForm($form, $form_state);
   }
 
   /**
-   * Get value from form field called api_key and recorde to config.
+   * Created for calling buildForm function.
+   *
+   * @param array $form
+   *   {@inheritDoc}.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   Current state of form.
+   */
+  public function validateApiKey(array &$form, FormStateInterface $form_state) {
+    $form_state->setRebuild(TRUE);
+    return $form;
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  public function validateForm(&$form, FormStateInterface $form_state): void {
+    $config = $this->config(static::SETTINGS);
+    $api_key = $form_state->getValue('api_key');
+    $valid_key = preg_match('/^.{40}$/', $api_key);
+    $valid_response = FALSE;
+    if (!$valid_key) {
+      $api_key = $config->get('key');
+    }
+    else {
+      $valid_response = $this->render->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, FALSE);
+    }
+    if (empty($api_key) || !$valid_response) {
+      $form_state->setErrorByName('api_key', $this->t('Invalid key was entered'));
+    }
+    else {
+      $form_state->clearErrors();
+    }
+    parent::validateForm($form, $form_state);
+  }
+
+  /**
+   * Get value from form fields and recorde it to config.
    *
    * {@inheritDoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->configFactory->getEditable(static::SETTINGS)
-      ->set('api_key', $form_state->getValue('api_key'))
+      ->set('key', $form_state->getValue('api_key'))
+      ->set('currency.first', $form_state->getValue('first'))
+      ->set('currency.second', $form_state->getValue('second'))
+      ->set('currency.third', $form_state->getValue('third'))
       ->save();
-
     parent::submitForm($form, $form_state);
   }
 
