@@ -19,7 +19,7 @@ bootstrap_barrio_navbar_top_background: ''
 bootstrap_barrio_navbar_position: ''
 bootstrap_barrio_navbar_color: ''
 bootstrap_barrio_navbar_background: ''
-bootstrap_barrio_messages_widget: toasts
+bootstrap_barrio_messages_widget: default
 bootstrap_barrio_radio: custom
 bootstrap_barrio_checkbox: switch
 bootstrap_barrio_select: custom
