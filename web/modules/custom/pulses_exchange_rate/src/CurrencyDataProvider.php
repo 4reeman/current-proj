@@ -2,6 +2,7 @@
 
 namespace Drupal\pulses_exchange_rate;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\pulses_exchange_rate\Form\ExchangeApiKey;
 use GuzzleHttp\ClientInterface;
 
@@ -32,13 +33,23 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   public $data = [];
 
   /**
+   * Instance of ConfigFactoryInterface.
+   *
+   * @var \Drupal\pulses_exchange_rate\CurrencyDataProvider
+   */
+  public $configFactory;
+
+  /**
    * Instance of Client class.
    *
    * @param \GuzzleHttp\ClientInterface $http_client
    *   Client object.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   ConfigFactory object.
    */
-  public function __construct(ClientInterface $http_client) {
+  public function __construct(ClientInterface $http_client, ConfigFactoryInterface $config_factory) {
     $this->client = $http_client;
+    $this->configFactory = $config_factory;
   }
 
   /**
@@ -105,8 +116,8 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    */
   public function setNestedData($data_array) {
     $refactor = &$this->data;
-    $config = \Drupal::config(ExchangeApiKey::SETTINGS)->getRawData();
-    foreach ($config['currency'] as $item => $value) {
+    $config = $this->configFactory->getEditable(ExchangeApiKey::SETTINGS)->getRawData();
+    foreach ($config['currency'] as $value) {
       $config_arr[$value] = $value;
     }
     foreach ($data_array['data'] as $currency => $value) {

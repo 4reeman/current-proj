@@ -27,6 +27,13 @@ class PulsesExchangeRate extends BlockBase implements ContainerFactoryPluginInte
   public $client;
 
   /**
+   * Instance of ConfigFactoryInterface.
+   *
+   * @var \Drupal\pulses_exchange_rate\CurrencyDataProvider
+   */
+  public $configFactory;
+
+  /**
    * Construct PulsesExchangeRate class.
    *
    * Get instance of Client class.
@@ -43,6 +50,7 @@ class PulsesExchangeRate extends BlockBase implements ContainerFactoryPluginInte
   public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrencyDataProviderInterface $currencyProvider) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->client = $currencyProvider;
+    $this->configFactory = $currencyProvider->configFactory;
   }
 
   /**
@@ -65,6 +73,7 @@ class PulsesExchangeRate extends BlockBase implements ContainerFactoryPluginInte
       $plugin_id,
       $plugin_definition,
       $container->get('pulses_exchange_rate_service'),
+      $container->get('config.factory'),
     );
   }
 
@@ -72,7 +81,7 @@ class PulsesExchangeRate extends BlockBase implements ContainerFactoryPluginInte
    * {@inheritdoc}
    */
   public function build() {
-    $api_key = \Drupal::config(ExchangeApiKey::SETTINGS)->get('key');
+    $api_key = $this->configFactory->getEditable(ExchangeApiKey::SETTINGS)->get('key');
     if (!empty($api_key)) {
       $this->client->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, TRUE);
     }
