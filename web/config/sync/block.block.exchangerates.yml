@@ -1,0 +1,20 @@
+uuid: 2577b10c-1190-4b15-9a49-1f1a83374100
+langcode: en
+status: true
+dependencies:
+  module:
+    - pulses_exchange_rate
+  theme:
+    - fifth_sub_bootstrap
+id: exchangerates
+theme: fifth_sub_bootstrap
+region: content_second_group
+weight: 0
+provider: null
+plugin: exchange_rates
+settings:
+  id: exchange_rates
+  label: 'Exchange Rates'
+  label_display: visible
+  provider: pulses_exchange_rate
+visibility: {  }
