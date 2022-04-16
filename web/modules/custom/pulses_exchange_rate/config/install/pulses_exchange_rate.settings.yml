@@ -1,3 +1,16 @@
-pulses_exchange_rate.key:
-  type: string
-  label: 'Api Key'
+pulses_exchange_rate.settings:
+  type: mapping
+  mapping:
+    key:
+      type: string
+      label: 'Api Key'
+    currency:
+        first:
+          type: string
+          label: 'First currency'
+        second:
+          type: string
+          label: 'Second currency'
+        third:
+          type: string
+          label: 'Third currency'
