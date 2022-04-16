@@ -29,7 +29,8 @@
         "drupal/social_media": "^1.8",
         "drupal/taxonomy_menu": "^3.5",
         "drupal/token_filter": "^1.3",
-        "drush/drush": "^10.2"
+        "drush/drush": "^10.2",
+        "ext-json": "*"
     },
     "conflict": {
         "drupal/drupal": "*"
