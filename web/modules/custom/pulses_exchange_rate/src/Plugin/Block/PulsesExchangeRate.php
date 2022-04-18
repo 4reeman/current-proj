@@ -4,6 +4,7 @@ namespace Drupal\pulses_exchange_rate\Plugin\Block;
 
 use Drupal\Core\Block\Annotation\Block;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\pulses_exchange_rate\CurrencyDataProviderInterface;
 use Drupal\pulses_exchange_rate\Form\ExchangeApiKey;
@@ -27,11 +28,11 @@ class PulsesExchangeRate extends BlockBase implements ContainerFactoryPluginInte
   public $client;
 
   /**
-   * Instance of ConfigFactoryInterface.
+   * Instance of ConfigFactory.
    *
-   * @var \Drupal\pulses_exchange_rate\CurrencyDataProvider
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
-  public $configFactory;
+  private $configFactory;
 
   /**
    * Construct PulsesExchangeRate class.
@@ -46,11 +47,13 @@ class PulsesExchangeRate extends BlockBase implements ContainerFactoryPluginInte
    *   Current plugin definition.
    * @param \Drupal\pulses_exchange_rate\CurrencyDataProviderInterface $currencyProvider
    *   Instance of currencyProvider class.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   ConfigFactory.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrencyDataProviderInterface $currencyProvider) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, CurrencyDataProviderInterface $currencyProvider, ConfigFactoryInterface $configFactory) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->client = $currencyProvider;
-    $this->configFactory = $currencyProvider->configFactory;
+    $this->configFactory = $configFactory;
   }
 
   /**

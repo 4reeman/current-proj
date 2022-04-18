@@ -23,7 +23,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    *
    * @var object
    */
-  public $header;
+  private $header;
 
   /**
    * Final array with different nested.
@@ -35,9 +35,9 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Instance of ConfigFactoryInterface.
    *
-   * @var \Drupal\pulses_exchange_rate\CurrencyDataProvider
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
-  public $configFactory;
+  private $configFactory;
 
   /**
    * Instance of Client class.
@@ -88,7 +88,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    *
    * Write value to object variable (responseBody).
    */
-  public function getResponseBody() {
+  private function getResponseBody() {
     $body = $this->header->getBody();
     $string_data = $this->responseBodySize($body, 6000);
     $data = json_decode($string_data, TRUE);
@@ -105,7 +105,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    * @param int $max_size
    *   Max size of string which will be created from json data.
    */
-  public function responseBodySize($response_body, $max_size) {
+  protected function responseBodySize($response_body, $max_size) {
     if ($response_body->getSize() < $max_size) {
       return $response_body->read($max_size);
     }
@@ -114,7 +114,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Create final nested array (for block).
    */
-  public function setNestedData($data_array) {
+  private function setNestedData($data_array) {
     $refactor = &$this->data;
     $config = $this->configFactory->getEditable(ExchangeApiKey::SETTINGS)->getRawData();
     foreach ($config['currency'] as $value) {
@@ -129,7 +129,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Create final array (for options of form`s select elements).
    */
-  public function setData($data_array) {
+  private function setData($data_array) {
     $build = &$this->data;
     foreach ($data_array['data'] as $currency => $value) {
       $build[$currency] = $currency;
