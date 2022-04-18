@@ -86,7 +86,7 @@ class PulsesExchangeRate extends BlockBase implements ContainerFactoryPluginInte
   public function build() {
     $api_key = $this->configFactory->getEditable(ExchangeApiKey::SETTINGS)->get('key');
     if (!empty($api_key)) {
-      $this->client->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, TRUE);
+      $this->client->getResponse(ExchangeApiKey::API_URL, $api_key, TRUE);
     }
     return [
       '#theme' => 'bla',

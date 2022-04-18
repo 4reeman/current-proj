@@ -35,6 +35,13 @@ class ExchangeApiKey extends ConfigFormBase {
   const SETTINGS = 'pulses_exchange_rate.settings';
 
   /**
+   * API URl. Prepared to concat with  parameter called api key.
+   *
+   * @var string
+   */
+  const API_URL = 'https://api.currencyapi.com/v3/latest?apikey=';
+
+  /**
    * {@inheritDoc}
    */
   public function getFormId() {
@@ -67,7 +74,7 @@ class ExchangeApiKey extends ConfigFormBase {
       $api_key = $config->get('key');
     }
     else {
-      $valid_response = $this->render->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, FALSE);
+      $valid_response = $this->render->getResponse(static::API_URL, $api_key, FALSE);
     }
     $form['api_key'] = [
       '#type' => 'textfield',
@@ -138,15 +145,14 @@ class ExchangeApiKey extends ConfigFormBase {
    * {@inheritDoc}
    */
   public function validateForm(&$form, FormStateInterface $form_state): void {
-    $config = $this->config(static::SETTINGS);
     $api_key = $form_state->getValue('api_key');
-    $valid_key = preg_match('/^.{40}$/', $api_key);
-    $valid_response = FALSE;
-    if (!$valid_key) {
-      $api_key = $config->get('key');
+    $valid_response = TRUE;
+    if (strlen($api_key) === 40) {
+      $valid_response = $this->render->getResponse(static::API_URL, $api_key, FALSE);
     }
     else {
-      $valid_response = $this->render->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, FALSE);
+      $config = $this->config(static::SETTINGS);
+      $api_key = $config->get('key');
     }
     if (empty($api_key) || !$valid_response) {
       $form_state->setErrorByName('api_key', $this->t('Invalid key was entered'));
