@@ -1,5 +1,6 @@
 pulses_exchange_rate.settings:
-  type: mapping
+  type: config_object
+  label: 'Pulses Exchange Rate config'
   mapping:
     key:
       type: string
