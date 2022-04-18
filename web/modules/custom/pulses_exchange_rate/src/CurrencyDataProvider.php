@@ -2,6 +2,7 @@
 
 namespace Drupal\pulses_exchange_rate;
 
+use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\pulses_exchange_rate\Form\ExchangeApiKey;
@@ -34,18 +35,25 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   public $data = [];
 
   /**
-   * Instance of ConfigFactoryInterface.
+   * Instance of ConfigFactory.
    *
    * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
   private $configFactory;
 
   /**
-   * Instance of CacheBackendInterface.
+   * Instance of CacheBackend.
    *
    * @var \Drupal\Core\Cache\CacheBackendInterface
    */
   private $cache;
+
+  /**
+   * Instance of Time.
+   *
+   * @var \Drupal\Component\Datetime\TimeInterface
+   */
+  private $dateTime;
 
   /**
    * Instance of Client class.
@@ -55,12 +63,15 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   ConfigFactory object.
    * @param \Drupal\Core\Cache\CacheBackendInterface $cache
-   *   CacheBackendInterface object.
+   *   CacheBackend object.
+   * @param \Drupal\Component\Datetime\TimeInterface $date_time
+   *   TimeInterface object.
    */
-  public function __construct(ClientInterface $http_client, ConfigFactoryInterface $config_factory, CacheBackendInterface $cache) {
+  public function __construct(ClientInterface $http_client, ConfigFactoryInterface $config_factory, CacheBackendInterface $cache, TimeInterface $date_time) {
     $this->client = $http_client;
     $this->configFactory = $config_factory;
     $this->cache = $cache;
+    $this->dateTime = $date_time;
   }
 
   /**
@@ -143,7 +154,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
     $refactor = array_intersect_key($refactor, $config_arr);
     $cid = 'pulses_exchange_rate: nested_data_' . var_export(TRUE, TRUE);
     $this->cache
-      ->set($cid, $refactor, \Drupal::time()->getRequestTime() + (86400));
+      ->set($cid, $refactor, $this->dateTime->getRequestTime() + (86400));
   }
 
   /**
@@ -155,8 +166,8 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
       $build[$currency] = $currency;
     }
     $cid = 'pulses_exchange_rate: nested_data_' . var_export(FALSE, TRUE);
-    \Drupal::cache()
-      ->set($cid, $build, \Drupal::time()->getRequestTime() + (86400));
+    $this->cache
+      ->set($cid, $build, $this->dateTime->getRequestTime() + (86400));
   }
 
 }
