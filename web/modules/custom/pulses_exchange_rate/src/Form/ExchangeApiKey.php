@@ -14,7 +14,7 @@ class ExchangeApiKey extends ConfigFormBase {
   /**
    * Instance of CurrencyDataProvider.
    *
-   * @var null
+   * @var \Drupal\pulses_exchange_rate\CurrencyDataProviderInterface
    */
   public $render;
 
