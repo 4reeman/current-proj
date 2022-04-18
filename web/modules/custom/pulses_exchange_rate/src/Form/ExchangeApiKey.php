@@ -74,7 +74,7 @@ class ExchangeApiKey extends ConfigFormBase {
       '#title' => $this->t('Please, enter your Api key:'),
       '#default_value' => $config->get('key'),
       '#maxlength' => 40,
-      '#description' => 'Press enter for continue filling form',
+      '#description' => $this->t('Press enter for continue filling form'),
       '#ajax' => [
         'callback' => '::validateApiKey',
         'disable-refocus' => TRUE,
