@@ -73,19 +73,24 @@ class ExchangeApiKey extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Please, enter your Api key:'),
       '#default_value' => $config->get('key'),
+      '#maxlength' => 40,
+      '#description' => 'Press enter for continue filling form',
       '#ajax' => [
         'callback' => '::validateApiKey',
         'disable-refocus' => TRUE,
         'keypress' => TRUE,
-        'event' => 'blur',
-        'wrapper' => 'pulses-exchange-rates',
+        'event' => 'change',
+        'wrapper' => 'currency-wrapper',
         'progress' => FALSE,
       ],
     ];
+    $form['currency'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'id' => 'currency-wrapper',
+      ],
+    ];
     if (!empty($api_key) && $valid_response) {
-      $form['currency'] = [
-        '#type' => 'fieldset',
-      ];
       $form['currency']['first'] = [
         '#type' => 'select',
         '#title' => $this->t('Select needed currency:'),
@@ -104,8 +109,17 @@ class ExchangeApiKey extends ConfigFormBase {
         '#options' => $this->render->data,
         '#default_value' => $config->get('currency.third'),
       ];
+      $form['currency']['actions']['#type'] = 'actions';
+      $form['currency']['actions']['submit'] = [
+        '#type' => 'submit',
+        '#value' => $this->t('Save configuration'),
+        '#button_type' => 'primary',
+      ];
+
+      // By default, render the form using system-config-form.html.twig.
+      $form['#theme'] = 'system_config_form';
     }
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
 
   /**
@@ -117,8 +131,7 @@ class ExchangeApiKey extends ConfigFormBase {
    *   Current state of form.
    */
   public function validateApiKey(array &$form, FormStateInterface $form_state) {
-    $form_state->setRebuild(TRUE);
-    return $form;
+    return $form['currency'];
   }
 
   /**
