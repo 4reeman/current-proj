@@ -61,10 +61,10 @@ class PulsesWeatherProvider implements PulsesWeatherProviderInterface {
    * {@inheritDoc}
    */
   public function getWeatherInfo($api_key) {
-    if ($cache = $this->cache->get($api_key)) {
+    $user_data = $this->userInfo->getData();
+    if ($cache = $this->cache->get($user_data['user_id'])) {
       return $cache->data;
     }
-    $user_data = $this->userInfo->getData();
     $city = $user_data['city_name'];
     $language = $user_data['langcode'];
     $key_param = '&appid=';
@@ -72,7 +72,7 @@ class PulsesWeatherProvider implements PulsesWeatherProviderInterface {
     $data = $this->response->getDecodedData($url);
     if (!empty($data)) {
       $this->cache
-        ->set($api_key, $data, $this->dateTime->getRequestTime() + (86400));
+        ->set($user_data['user_id'], $data, $this->dateTime->getRequestTime() + (86400));
     }
     return $data;
   }

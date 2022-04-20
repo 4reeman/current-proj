@@ -137,13 +137,11 @@ class PulsesCityProvider implements PulsesCityProviderInterface {
         'langcode' => $language,
       ];
       $this->database->insert('pulses_weather_user_location')->fields($data)->execute();
-      unset($data['user_id']);
       return $data;
     }
     else {
-      $remove = ['id', 'user_id'];
-      $prepared = array_diff_key($exist, array_flip($remove));
-      return $prepared;
+      unset($exist['id']);
+      return $exist;
     }
   }
 
