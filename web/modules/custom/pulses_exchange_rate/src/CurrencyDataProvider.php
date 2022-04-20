@@ -124,10 +124,10 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
         return FALSE;
       }
       if ($nested) {
-        $this->setNestedData($this->getResponseBody(), $nested);
+        $this->setNestedData($this->getResponseBody());
       }
       else {
-        $this->setData($this->getResponseBody(), $nested);
+        $this->setData($this->getResponseBody());
       }
       return TRUE;
     }
@@ -164,7 +164,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Create final nested array (for block).
    */
-  private function setNestedData($data_array, $nested) {
+  private function setNestedData($data_array) {
     $refactor = &$this->data;
     $config = $this->configFactory->getEditable(ExchangeApiKey::SETTINGS)->getRawData();
     foreach ($config['currency'] as $value) {
@@ -174,7 +174,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
       $refactor[$currency] = strval($value['value']);
     }
     $refactor = array_intersect_key($refactor, $config_arr);
-    $cid = $this->getCacheId($nested);
+    $cid = $this->getCacheId(TRUE);
     $this->cache
       ->set($cid, $refactor, $this->dateTime->getRequestTime() + (86400));
   }
@@ -182,12 +182,12 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Create final array (for options of form`s select elements).
    */
-  private function setData($data_array, $nested) {
+  private function setData($data_array) {
     $build = &$this->data;
     foreach ($data_array['data'] as $currency => $value) {
       $build[$currency] = $currency;
     }
-    $cid = $this->getCacheId($nested);
+    $cid = $this->getCacheId(FALSE);
     $this->cache
       ->set($cid, $build, $this->dateTime->getRequestTime() + (86400));
   }
