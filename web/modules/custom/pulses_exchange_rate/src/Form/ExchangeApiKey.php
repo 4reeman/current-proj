@@ -14,7 +14,7 @@ class ExchangeApiKey extends ConfigFormBase {
   /**
    * Instance of CurrencyDataProvider.
    *
-   * @var null
+   * @var \Drupal\pulses_exchange_rate\CurrencyDataProviderInterface
    */
   public $render;
 
@@ -33,6 +33,13 @@ class ExchangeApiKey extends ConfigFormBase {
    * @var string
    */
   const SETTINGS = 'pulses_exchange_rate.settings';
+
+  /**
+   * API URl. Prepared to concat with  parameter called api key.
+   *
+   * @var string
+   */
+  const API_URL = 'https://api.currencyapi.com/v3/latest?apikey=';
 
   /**
    * {@inheritDoc}
@@ -67,25 +74,30 @@ class ExchangeApiKey extends ConfigFormBase {
       $api_key = $config->get('key');
     }
     else {
-      $valid_response = $this->render->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, FALSE);
+      $valid_response = $this->render->getResponse(static::API_URL, $api_key, FALSE);
     }
     $form['api_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Please, enter your Api key:'),
       '#default_value' => $config->get('key'),
+      '#maxlength' => 40,
+      '#description' => $this->t('Press enter for continue filling form'),
       '#ajax' => [
         'callback' => '::validateApiKey',
         'disable-refocus' => TRUE,
         'keypress' => TRUE,
-        'event' => 'blur',
-        'wrapper' => 'pulses-exchange-rates',
+        'event' => 'change',
+        'wrapper' => 'currency-wrapper',
         'progress' => FALSE,
       ],
     ];
+    $form['currency'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'id' => 'currency-wrapper',
+      ],
+    ];
     if (!empty($api_key) && $valid_response) {
-      $form['currency'] = [
-        '#type' => 'fieldset',
-      ];
       $form['currency']['first'] = [
         '#type' => 'select',
         '#title' => $this->t('Select needed currency:'),
@@ -104,8 +116,17 @@ class ExchangeApiKey extends ConfigFormBase {
         '#options' => $this->render->data,
         '#default_value' => $config->get('currency.third'),
       ];
+      $form['currency']['actions']['#type'] = 'actions';
+      $form['currency']['actions']['submit'] = [
+        '#type' => 'submit',
+        '#value' => $this->t('Save configuration'),
+        '#button_type' => 'primary',
+      ];
+
+      // By default, render the form using system-config-form.html.twig.
+      $form['#theme'] = 'system_config_form';
     }
-    return parent::buildForm($form, $form_state);
+    return $form;
   }
 
   /**
@@ -117,23 +138,21 @@ class ExchangeApiKey extends ConfigFormBase {
    *   Current state of form.
    */
   public function validateApiKey(array &$form, FormStateInterface $form_state) {
-    $form_state->setRebuild(TRUE);
-    return $form;
+    return $form['currency'];
   }
 
   /**
    * {@inheritDoc}
    */
   public function validateForm(&$form, FormStateInterface $form_state): void {
-    $config = $this->config(static::SETTINGS);
     $api_key = $form_state->getValue('api_key');
-    $valid_key = preg_match('/^.{40}$/', $api_key);
-    $valid_response = FALSE;
-    if (!$valid_key) {
-      $api_key = $config->get('key');
+    $valid_response = TRUE;
+    if (strlen($api_key) === 40) {
+      $valid_response = $this->render->getResponse(static::API_URL, $api_key, FALSE);
     }
     else {
-      $valid_response = $this->render->getResponse('https://api.currencyapi.com/v3/latest?apikey=', $api_key, FALSE);
+      $config = $this->config(static::SETTINGS);
+      $api_key = $config->get('key');
     }
     if (empty($api_key) || !$valid_response) {
       $form_state->setErrorByName('api_key', $this->t('Invalid key was entered'));

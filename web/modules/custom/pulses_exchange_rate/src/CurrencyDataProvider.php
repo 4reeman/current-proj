@@ -2,6 +2,8 @@
 
 namespace Drupal\pulses_exchange_rate;
 
+use Drupal\Component\Datetime\TimeInterface;
+use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\pulses_exchange_rate\Form\ExchangeApiKey;
 use GuzzleHttp\ClientInterface;
@@ -23,7 +25,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    *
    * @var object
    */
-  public $header;
+  private $header;
 
   /**
    * Final array with different nested.
@@ -33,11 +35,25 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   public $data = [];
 
   /**
-   * Instance of ConfigFactoryInterface.
+   * Instance of ConfigFactory.
    *
-   * @var \Drupal\pulses_exchange_rate\CurrencyDataProvider
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
-  public $configFactory;
+  private $configFactory;
+
+  /**
+   * Instance of CacheBackend.
+   *
+   * @var \Drupal\Core\Cache\CacheBackendInterface
+   */
+  private $cache;
+
+  /**
+   * Instance of Time.
+   *
+   * @var \Drupal\Component\Datetime\TimeInterface
+   */
+  private $dateTime;
 
   /**
    * Instance of Client class.
@@ -46,10 +62,16 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    *   Client object.
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   ConfigFactory object.
+   * @param \Drupal\Core\Cache\CacheBackendInterface $cache
+   *   CacheBackend object.
+   * @param \Drupal\Component\Datetime\TimeInterface $date_time
+   *   TimeInterface object.
    */
-  public function __construct(ClientInterface $http_client, ConfigFactoryInterface $config_factory) {
+  public function __construct(ClientInterface $http_client, ConfigFactoryInterface $config_factory, CacheBackendInterface $cache, TimeInterface $date_time) {
     $this->client = $http_client;
     $this->configFactory = $config_factory;
+    $this->cache = $cache;
+    $this->dateTime = $date_time;
   }
 
   /**
@@ -65,14 +87,20 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    *   Describe how to sort array with data after decode.
    */
   public function getResponse($url, $api_key, $nested) {
-    $header = &$this->header;
-    try {
-      $header = $this->client->get($url . $api_key);
+    $cid = 'pulses_exchange_rate: nested_data_' . var_export($nested, TRUE);
+    if ($cache = $this->cache
+      ->get($cid)) {
+      $this->data = $cache->data;
+      return TRUE;
     }
-    catch (\Exception $e) {
-      return FALSE;
-    }
-    if ($header->getStatusCode() == '200') {
+    else {
+      $header = &$this->header;
+      try {
+        $header = $this->client->get($url . $api_key);
+      }
+      catch (\Exception $e) {
+        return FALSE;
+      }
       if ($nested) {
         $this->setNestedData($this->getResponseBody());
       }
@@ -88,7 +116,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    *
    * Write value to object variable (responseBody).
    */
-  public function getResponseBody() {
+  private function getResponseBody() {
     $body = $this->header->getBody();
     $string_data = $this->responseBodySize($body, 6000);
     $data = json_decode($string_data, TRUE);
@@ -105,7 +133,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    * @param int $max_size
    *   Max size of string which will be created from json data.
    */
-  public function responseBodySize($response_body, $max_size) {
+  protected function responseBodySize($response_body, $max_size) {
     if ($response_body->getSize() < $max_size) {
       return $response_body->read($max_size);
     }
@@ -114,7 +142,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Create final nested array (for block).
    */
-  public function setNestedData($data_array) {
+  private function setNestedData($data_array) {
     $refactor = &$this->data;
     $config = $this->configFactory->getEditable(ExchangeApiKey::SETTINGS)->getRawData();
     foreach ($config['currency'] as $value) {
@@ -124,16 +152,22 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
       $refactor[$currency] = strval($value['value']);
     }
     $refactor = array_intersect_key($refactor, $config_arr);
+    $cid = 'pulses_exchange_rate: nested_data_' . var_export(TRUE, TRUE);
+    $this->cache
+      ->set($cid, $refactor, $this->dateTime->getRequestTime() + (86400));
   }
 
   /**
    * Create final array (for options of form`s select elements).
    */
-  public function setData($data_array) {
+  private function setData($data_array) {
     $build = &$this->data;
     foreach ($data_array['data'] as $currency => $value) {
       $build[$currency] = $currency;
     }
+    $cid = 'pulses_exchange_rate: nested_data_' . var_export(FALSE, TRUE);
+    $this->cache
+      ->set($cid, $build, $this->dateTime->getRequestTime() + (86400));
   }
 
 }

@@ -1,4 +1,4 @@
 services:
   pulses_exchange_rate_service:
     class: Drupal\pulses_exchange_rate\CurrencyDataProvider
-    arguments: ['@http_client', '@config.factory']
+    arguments: ['@http_client', '@config.factory', '@cache.static', '@datetime.time']
