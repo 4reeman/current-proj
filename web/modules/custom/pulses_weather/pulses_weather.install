@@ -36,7 +36,7 @@ function pulses_weather_schema() {
         'default' => 'en',
       ],
     ],
-    'primary key' => ['id']
+    'primary key' => ['id'],
   ];
   return $schema;
 }
