@@ -125,7 +125,9 @@ class PulsesCityProvider implements PulsesCityProviderInterface {
   public function getData() {
     $user = $this->user->id();
     $exist = $this->dataExist($user);
-    $default_city = $this->configFactory->get(WeatherSettingsForm::SETTINGS)->get('city');
+    $default_city = $this->configFactory
+      ->get(WeatherSettingsForm::SETTINGS)
+      ->get('city');
     $city = $this->getCityName() ?: $default_city;
     $language = $this->user->getPreferredLangcode();
     if (!$exist) {
