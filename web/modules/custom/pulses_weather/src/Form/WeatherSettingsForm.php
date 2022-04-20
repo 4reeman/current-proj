@@ -59,16 +59,16 @@ class WeatherSettingsForm extends ConfigFormBase {
     $config = $this->config(static::SETTINGS);
     $form['weather']['api_key'] = [
       '#type' => 'textfield',
-      '#title' => 'Enter your API Key:',
-      '#description' => 'Field should contain 32 characters and valid api key',
+      '#title' => $this->t('Enter your API Key:'),
+      '#description' => $this->t('Field should contain 32 characters and valid api key'),
       '#pattern' => '^.{32}$',
       '#default_value' => $config->get('api_key'),
       '#required' => TRUE,
     ];
     $form['weather']['city'] = [
       '#type' => 'textfield',
-      '#title' => 'Enter the default city name:',
-      '#description' => 'Field shouldn`t contain number',
+      '#title' => $this->t('Enter the default city name:'),
+      '#description' => $this->t('Field shouldn`t contain number'),
       '#required' => TRUE,
       '#pattern' => '[a-zA-Z]{2,30}$',
       '#default_value' => $config->get('city'),
