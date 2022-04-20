@@ -54,6 +54,12 @@ class PulsesWeather extends BlockBase implements ContainerFactoryPluginInterface
     $this->configFactory = $config_factory;
   }
 
+  /**
+   * Disable caching for current block.
+   *
+   * @return int
+   *   Set CacheMaxAge.
+   */
   public function getCacheMaxAge() {
     return 0;
   }
