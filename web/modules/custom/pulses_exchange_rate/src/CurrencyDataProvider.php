@@ -56,6 +56,13 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   private $dateTime;
 
   /**
+   * API key. Value set in getResponse.
+   *
+   * @var \Drupal\pulses_exchange_rate\CurrencyDataProvider
+   */
+  private $apiKey;
+
+  /**
    * Instance of Client class.
    *
    * @param \GuzzleHttp\ClientInterface $http_client
@@ -75,6 +82,21 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   }
 
   /**
+   * Prepare cache ID.
+   *
+   * @param bool $nested
+   *   Describe how to sort array with data after decode.
+   *
+   * @return string
+   *   The cache ID of the data to retrieve.
+   */
+  private function getCacheId($nested) {
+    $api_key = $this->apiKey;
+    $nesting = var_export($nested, TRUE);
+    return 'pulses_exchange_rate:' . $api_key . ':nested_data_' . $nesting;
+  }
+
+  /**
    * Request data by URL & write value to object variable (header).
    *
    * Sort array with data after decode & write value to object variable (data).
@@ -87,9 +109,9 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
    *   Describe how to sort array with data after decode.
    */
   public function getResponse($url, $api_key, $nested) {
-    $cid = 'pulses_exchange_rate: nested_data_' . var_export($nested, TRUE);
-    if ($cache = $this->cache
-      ->get($cid)) {
+    $this->apiKey = $api_key;
+    $cid = $this->getCacheId($nested);
+    if ($cache = $this->cache->get($cid)) {
       $this->data = $cache->data;
       return TRUE;
     }
@@ -102,10 +124,10 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
         return FALSE;
       }
       if ($nested) {
-        $this->setNestedData($this->getResponseBody());
+        $this->setNestedData($this->getResponseBody(), $nested);
       }
       else {
-        $this->setData($this->getResponseBody());
+        $this->setData($this->getResponseBody(), $nested);
       }
       return TRUE;
     }
@@ -142,7 +164,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Create final nested array (for block).
    */
-  private function setNestedData($data_array) {
+  private function setNestedData($data_array, $nested) {
     $refactor = &$this->data;
     $config = $this->configFactory->getEditable(ExchangeApiKey::SETTINGS)->getRawData();
     foreach ($config['currency'] as $value) {
@@ -152,7 +174,7 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
       $refactor[$currency] = strval($value['value']);
     }
     $refactor = array_intersect_key($refactor, $config_arr);
-    $cid = 'pulses_exchange_rate: nested_data_' . var_export(TRUE, TRUE);
+    $cid = $this->getCacheId($nested);
     $this->cache
       ->set($cid, $refactor, $this->dateTime->getRequestTime() + (86400));
   }
@@ -160,12 +182,12 @@ class CurrencyDataProvider implements CurrencyDataProviderInterface {
   /**
    * Create final array (for options of form`s select elements).
    */
-  private function setData($data_array) {
+  private function setData($data_array, $nested) {
     $build = &$this->data;
     foreach ($data_array['data'] as $currency => $value) {
       $build[$currency] = $currency;
     }
-    $cid = 'pulses_exchange_rate: nested_data_' . var_export(FALSE, TRUE);
+    $cid = $this->getCacheId($nested);
     $this->cache
       ->set($cid, $build, $this->dateTime->getRequestTime() + (86400));
   }
