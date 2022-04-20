@@ -1,4 +1,4 @@
-name: pulses_weather
+name: Pulses Weather
 description: Module provide with weather information
 package: custom
 
@@ -6,6 +6,7 @@ type: module
 core: 8.x
 core_version_requirement: ^8 || ^9
 version: 1.0.0
+configure: pulses_weather.settings
 
 dependencies:
   - block
