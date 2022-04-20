@@ -122,10 +122,9 @@ class ExchangeApiKey extends ConfigFormBase {
         '#value' => $this->t('Save configuration'),
         '#button_type' => 'primary',
       ];
-
-      // By default, render the form using system-config-form.html.twig.
-      $form['#theme'] = 'system_config_form';
     }
+    // By default, render the form using system-config-form.html.twig.
+    $form['#theme'] = 'system_config_form';
     return $form;
   }
 
