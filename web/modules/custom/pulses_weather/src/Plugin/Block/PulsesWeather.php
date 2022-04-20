@@ -58,7 +58,9 @@ class PulsesWeather extends BlockBase implements ContainerFactoryPluginInterface
    * {@inheritdoc}
    */
   public function build() {
-    $key = $this->configFactory->get(WeatherSettingsForm::SETTINGS)->get('api_key');
+    $key = $this->configFactory
+      ->get(WeatherSettingsForm::SETTINGS)
+      ->get('api_key');
     return [
       '#theme' => 'weather',
       '#data' => $this->weatherService->getWeatherInfo($key),
