@@ -54,6 +54,10 @@ class PulsesWeather extends BlockBase implements ContainerFactoryPluginInterface
     $this->configFactory = $config_factory;
   }
 
+  public function getCacheMaxAge() {
+    return 0;
+  }
+
   /**
    * {@inheritdoc}
    */
