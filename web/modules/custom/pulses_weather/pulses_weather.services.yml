@@ -1,0 +1,21 @@
+services:
+  pulses_city_service:
+    class: Drupal\pulses_weather\PulsesCityProvider
+    arguments:
+      - '@pulses_validation_service'
+      - '@database'
+      - '@current_user'
+      - '@request_stack'
+      - '@config.factory'
+  pulses_weather_service:
+    class: Drupal\pulses_weather\PulsesWeatherProvider
+    arguments:
+      - '@pulses_validation_service'
+      - '@pulses_city_service'
+      - '@cache.default'
+      - '@datetime.time'
+  pulses_validation_service:
+    class: Drupal\pulses_weather\PulsesResponseValidation
+    arguments:
+      - '@http_client'
+      - '@logger.factory'

@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Create database tables and fields.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Create table in database.
+ */
+function pulses_weather_schema() {
+  $schema['pulses_weather_user_location'] = [
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'user_id' => [
+        'type' => 'varchar',
+        'length' => '7',
+        'not null' => TRUE,
+      ],
+      'city_name' => [
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+        'default' => 'Lutsk',
+      ],
+      'langcode' => [
+        'type' => 'varchar',
+        'length' => 5,
+        'not null' => TRUE,
+        'default' => 'en',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
