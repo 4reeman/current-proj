@@ -1,0 +1,17 @@
+pulses_exchange_rate.settings:
+  type: config_object
+  label: 'Pulses Exchange Rate config'
+  mapping:
+    key:
+      type: string
+      label: 'Api Key'
+    currency:
+        first:
+          type: string
+          label: 'First currency'
+        second:
+          type: string
+          label: 'Second currency'
+        third:
+          type: string
+          label: 'Third currency'

@@ -1,0 +1,12 @@
+name: Pulses Exchange Rate
+description: Define side for img of Additional Fieldset paragraph type
+package: custom
+
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+version: 1.0.0
+configure: pulses_exchange_rate.settings
+
+dependencies:
+  - block
