@@ -62,17 +62,17 @@ class PulsesWeatherProvider implements PulsesWeatherProviderInterface {
    */
   public function getWeatherInfo($api_key) {
     $user_data = $this->userInfo->getData();
-    if ($cache = $this->cache->get($user_data['user_id'])) {
+    $city = $user_data['city_name'];
+    if ($cache = $this->cache->get($city)) {
       return $cache->data;
     }
-    $city = $user_data['city_name'];
     $language = $user_data['langcode'];
     $key_param = '&appid=';
     $url = 'https://api.openweathermap.org/data/2.5/weather?q=' . $city . '&lang=' . $language . $key_param . $api_key;
     $data = $this->response->getDecodedData($url);
     if (!empty($data)) {
       $this->cache
-        ->set($user_data['user_id'], $data, $this->dateTime->getRequestTime() + (86400));
+        ->set($city, $data, $this->dateTime->getRequestTime() + (86400));
     }
     return $data;
   }

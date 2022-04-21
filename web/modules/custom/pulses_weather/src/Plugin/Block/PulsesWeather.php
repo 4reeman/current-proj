@@ -2,7 +2,6 @@
 
 namespace Drupal\pulses_weather\Plugin\Block;
 
-use Drupal\Core\Block\Annotation\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
